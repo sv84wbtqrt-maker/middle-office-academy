@@ -13,6 +13,9 @@ and the last 2 lesson files in `lessons/`.
 ## 2. Read the learner's progress in the Google Sheet
 Google Drive connector tools (load with ToolSearch if needed): `search_files`, `read_file_content`,
 `create_file`, `trash_file`.
+- Known ids (created by setup() on 2026-11-02): folder `1S85jX8AxTdYkJ5AqVuCNFCpkcyUfqDeN`,
+  Imports `10Dx6aZ0AdbjoH-JOwqbqbJTtYqHK4JaD`, Sheet `1cc64EyEdd07aWwsmT_SYQSJlzvYXXqje172z9q3ycxo`.
+  If one of them is not found, search by name as below.
 - Find the Sheet: `search_files` with `title = 'Suivi Middle Office Academy'`. Find the folder:
   `title = 'Middle Office Academy' and mimeType = 'application/vnd.google-apps.folder'`, then the
   `Imports` folder inside it (`parentId = '<id>' and title = 'Imports'`).
