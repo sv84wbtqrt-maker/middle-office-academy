@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import validate_lesson  # noqa: E402
 from lesson_lib import build_index, copied_words, load_lessons  # noqa: E402
 
-BASE = json.loads((ROOT / "docs" / "lessons" / "001.json").read_text(encoding="utf-8"))
+BASE = json.loads((ROOT / "lessons" / "001.json").read_text(encoding="utf-8"))
 
 
 class ValidatorTest(unittest.TestCase):

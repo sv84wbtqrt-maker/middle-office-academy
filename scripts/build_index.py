@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild docs/data/lessons.json from docs/lessons/NNN.json. Never edit the index by hand."""
+"""Rebuild memory/lessons_index.json from lessons/NNN.json. Never edit the index by hand."""
 import json
 import sys
 from lesson_lib import INDEX_FILE, build_index, load_lessons

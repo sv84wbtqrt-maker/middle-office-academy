@@ -4,9 +4,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LESSONS_DIR = ROOT / "docs" / "lessons"
-INDEX_FILE = ROOT / "docs" / "data" / "lessons.json"
-PROGRESS_FILE = ROOT / "docs" / "data" / "progress.json"
+LESSONS_DIR = ROOT / "lessons"
+INDEX_FILE = ROOT / "memory" / "lessons_index.json"
+PROGRESS_FILE = ROOT / "memory" / "progress_snapshot.json"
 STATE_FILE = ROOT / "memory" / "state.json"
 
 # Handwriting budget for the part that is copied (objective + write sections + check questions).
@@ -60,7 +60,6 @@ def build_index(lessons):
             "concepts": l["concepts"],
             "request_ids": l["request_ids"],
             "words": copied_words(l),
-            "file": "lessons/%03d.json" % l["number"],
         })
     items.sort(key=lambda x: x["number"])
     return {"lessons": items, "latest": items[-1]["number"] if items else 0}

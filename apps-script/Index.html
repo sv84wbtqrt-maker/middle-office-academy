@@ -1,8 +1,111 @@
-/* Middle Office Academy: static site. Lessons come from lessons/NNN.json, progress from the Apps Script
-   web app (live) or data/progress.json (fallback). Buttons POST to the Apps Script web app. */
+<!doctype html>
+<html lang="en">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Middle Office Academy</title>
+<style>
+:root {
+  --bg: #f6f4ef; --card: #ffffff; --ink: #1f2328; --muted: #6a6f76; --line: #e3ded3;
+  --accent: #b5121b; --accent-ink: #ffffff; --ok: #1f7a4d; --ok-bg: #e6f4ec; --warn: #9a6200; --warn-bg: #fdf2dc;
+  --paper: #fffdf6; --rule: #dfe8f3; --margin: #f0b8b8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171a; --card: #1e2125; --ink: #e8e6e3; --muted: #9aa0a6; --line: #30343a;
+    --accent: #ff5a5f; --accent-ink: #15171a; --ok: #5fd39a; --ok-bg: #173226; --warn: #f3c062; --warn-bg: #3a2f17;
+    --paper: #202327; --rule: #2a3340; --margin: #5a2b2b;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171a; --card: #1e2125; --ink: #e8e6e3; --muted: #9aa0a6; --line: #30343a;
+  --accent: #ff5a5f; --accent-ink: #15171a; --ok: #5fd39a; --ok-bg: #173226; --warn: #f3c062; --warn-bg: #3a2f17;
+  --paper: #202327; --rule: #2a3340; --margin: #5a2b2b;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+.top { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--card); position: sticky; top: 0; z-index: 2; }
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: .2px; }
+nav { display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 999px; font-size: 15px; }
+nav a.active { background: var(--ink); color: var(--bg); }
+.progressbar { position: relative; height: 22px; background: var(--line); }
+.progressbar > div { height: 100%; background: var(--ok); opacity: .35; width: 0; transition: width .4s; }
+.progressbar span { position: absolute; inset: 0; font-size: 12px; display: flex; align-items: center; justify-content: center; color: var(--ink); }
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 80px; }
+.muted { color: var(--muted); }
+.meta { color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 6px 0 12px; }
+h2 { font-size: 1.1rem; margin: 28px 0 8px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 16px 0; }
+.story { font-size: 16px; border-left: 3px solid var(--line); padding: 2px 0 2px 14px; color: var(--ink); }
+.label { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin-bottom: 6px; }
+.label.write { color: var(--accent); }
+.paper { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 18px 30px; margin: 16px 0;
+  background-image: linear-gradient(to right, transparent 18px, var(--margin) 18px, var(--margin) 19.5px, transparent 19.5px),
+    repeating-linear-gradient(to bottom, transparent 0, transparent 27px, var(--rule) 27px, var(--rule) 28px);
+  line-height: 28px; font-size: 17px; }
+.paper h3 { font-size: 1rem; margin: 14px 0 0; line-height: 28px; }
+.paper p, .paper ul, .paper ol { margin: 0 0 4px; }
+.paper ul, .paper ol { padding-left: 22px; }
+.paper .objective { font-style: italic; }
+table { border-collapse: collapse; margin: 6px 0; font-size: 15px; width: 100%; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--line); padding: 2px 8px; text-align: left; line-height: 1.5; }
+.q { margin: 10px 0; }
+.q .a { display: none; margin-top: 4px; padding: 8px 10px; background: var(--ok-bg); border-radius: 8px; font-size: 15px; line-height: 1.5; }
+.q.open .a { display: block; }
+button, .btn { font: inherit; font-size: 15px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; cursor: pointer; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+button.ok { background: var(--ok); color: var(--card); border-color: var(--ok); }
+button.chip { border-radius: 999px; padding: 4px 12px; font-size: 14px; }
+button.chip.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+button:disabled { opacity: .5; cursor: default; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.status { padding: 10px 12px; border-radius: 10px; font-size: 15px; }
+.status.ok { background: var(--ok-bg); color: var(--ok); }
+.status.warn { background: var(--warn-bg); color: var(--warn); }
+textarea, input { font: inherit; width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: var(--card); color: var(--ink); }
+textarea { min-height: 100px; }
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { display: flex; gap: 10px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.list .num { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 2.5em; }
+.list a { color: var(--ink); text-decoration: none; flex: 1; }
+.badge { font-size: 12px; border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.badge.ok { background: var(--ok-bg); color: var(--ok); }
+.badge.todo { background: var(--warn-bg); color: var(--warn); }
+.module-title { margin: 22px 0 4px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+.pager { display: flex; justify-content: space-between; margin-top: 24px; }
+#toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 15px; opacity: 0; transition: opacity .3s; pointer-events: none; max-width: calc(100% - 32px); }
+#toast.show { opacity: 1; }
+@media print {
+  .top, .progressbar, .actions, .pager, #toast, .no-print { display: none !important; }
+  body { background: #fff; }
+  .paper { background: none; border: none; padding: 0; }
+  .q .a { display: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/">Middle Office Academy</a>
+  <nav>
+    <a href="#/" data-nav="today">Today</a>
+    <a href="#/archive" data-nav="archive">Archive</a>
+    <a href="#/ask" data-nav="ask">Ask</a>
+    <a href="#/settings" data-nav="settings">Settings</a>
+  </nav>
+</header>
+<div class="progressbar" id="progressbar" hidden><div id="progressfill"></div><span id="progresstext"></span></div>
+<main id="app"><p class="muted">Loading…</p></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+/* Middle Office Academy web page, served by Apps Script. Data and buttons go through google.script.run. */
 (function () {
   'use strict';
-  var S = { config: {}, index: { lessons: [], latest: 0 }, progress: { lessons: {}, requests: [] }, cache: {} };
+  var S = { index: { lessons: [], latest: 0 }, progress: { lessons: {}, requests: [] }, cache: {} };
   var app = document.getElementById('app');
 
   // ---------- storage (per device, never required) ----------
@@ -62,48 +165,29 @@
     t.textContent = msg; t.classList.add('show');
     clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove('show'); }, 3200);
   }
-  function getJSON(url) {
-    return fetch(url + (url.indexOf('?') < 0 ? '?' : '&') + 't=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); });
-  }
   function lessonStatus(n) {
     var e = S.progress.lessons && S.progress.lessons[String(n)];
     return (e && e.status) || 'not_written';
   }
   function lessonEntry(n) { return (S.progress.lessons && S.progress.lessons[String(n)]) || {}; }
 
-  // ---------- backend ----------
-  function backendReady() { return !!S.config.appsScriptUrl; }
-  function loadProgress() {
-    var fallback = function () { return getJSON('data/progress.json').catch(function () { return { lessons: {}, requests: [] }; }); };
-    if (!backendReady()) return fallback();
-    return getJSON(S.config.appsScriptUrl + '?action=progress')
-      .then(function (j) { if (!j.ok) throw new Error(j.error); return j.progress; })
-      .catch(fallback);
+  // ---------- backend (Apps Script) ----------
+  function call(fn) {
+    var args = Array.prototype.slice.call(arguments, 1);
+    return new Promise(function (resolve, reject) {
+      google.script.run.withSuccessHandler(resolve).withFailureHandler(reject)[fn].apply(null, args);
+    });
   }
-  function askPin() {
-    var pin = getLocal('moa_pin');
-    if (pin) return pin;
-    pin = window.prompt('Enter your PIN (the one saved in the Apps Script properties). It is remembered on this device.');
-    if (pin) setLocal('moa_pin', pin.trim());
-    return pin ? pin.trim() : null;
+  function setData(d) {
+    S.index = { lessons: d.lessons, latest: d.lessons.length ? d.lessons[d.lessons.length - 1].number : 0 };
+    S.cache = {};
+    d.lessons.forEach(function (l) { S.cache[l.number] = l; });
+    S.progress = { lessons: d.progress || {}, requests: d.requests || [] };
+    updateProgressBar();
   }
-  function post(payload) {
-    if (!backendReady()) { toast('Buttons not connected yet: add the Apps Script URL in docs/config.json.'); return Promise.reject(new Error('no backend')); }
-    var pin = askPin();
-    if (!pin) return Promise.reject(new Error('no pin'));
-    payload.pin = pin;
-    return fetch(S.config.appsScriptUrl, { method: 'POST', body: JSON.stringify(payload) })
-      .then(function (r) { return r.json(); })
-      .then(function (j) {
-        if (!j.ok) {
-          if (j.error === 'bad_pin') { delLocal('moa_pin'); throw new Error('Wrong PIN, try again.'); }
-          throw new Error(j.error || 'error');
-        }
-        if (j.progress) S.progress = j.progress;
-        return j;
-      })
-      .catch(function (e) { toast(e.message === 'Failed to fetch' ? 'Network error, try again.' : e.message); throw e; });
+  function post(fn) {
+    var args = Array.prototype.slice.call(arguments);
+    return call.apply(null, args).then(setData).catch(function (e) { toast('Error: ' + (e && e.message || e)); throw e; });
   }
 
   // ---------- views ----------
@@ -121,10 +205,7 @@
   }
 
   function loadLesson(n) {
-    if (S.cache[n]) return Promise.resolve(S.cache[n]);
-    var meta = S.index.lessons.filter(function (l) { return l.number === n; })[0];
-    if (!meta) return Promise.reject(new Error('Lesson ' + n + ' not found'));
-    return getJSON(meta.file).then(function (l) { S.cache[n] = l; return l; });
+    return S.cache[n] ? Promise.resolve(S.cache[n]) : Promise.reject(new Error('Lesson ' + n + ' not found'));
   }
 
   function renderLesson(n) {
@@ -187,7 +268,7 @@
       b.addEventListener('click', function () {
         var status = b.getAttribute('data-status');
         b.disabled = true;
-        post({ action: 'status', lesson: l.number, status: status }).then(function () {
+        post('setStatus', l.number, status).then(function () {
           toast(status === 'written' ? 'Well done! Saved.' : 'Saved.');
           updateProgressBar(); renderLesson(l.number);
         }).catch(function () { b.disabled = false; });
@@ -195,10 +276,8 @@
     });
     app.querySelectorAll('[data-fb]').forEach(function (b) {
       b.addEventListener('click', function () {
-        var p = { action: 'feedback', lesson: l.number };
-        p[b.getAttribute('data-fb')] = b.getAttribute('data-val');
         b.disabled = true;
-        post(p).then(function () { toast('Thanks, the teacher will adapt.'); renderLesson(l.number); })
+        post('setFeedback', l.number, b.getAttribute('data-fb'), b.getAttribute('data-val')).then(function () { toast('Thanks, the teacher will adapt.'); renderLesson(l.number); })
           .catch(function () { b.disabled = false; });
       });
     });
@@ -243,7 +322,7 @@
       if (t.length < 3) { toast('Write your question first.'); return; }
       this.disabled = true;
       var btn = this;
-      post({ action: 'ask', text: t, lesson: lesson ? parseInt(lesson, 10) : null })
+      post('askQuestion', t, lesson ? parseInt(lesson, 10) : null)
         .then(function () { toast('Sent! It will shape an upcoming lesson.'); renderAsk(query); })
         .catch(function () { btn.disabled = false; });
     });
@@ -251,21 +330,10 @@
 
   function renderSettings() {
     setNav('settings');
-    var pin = getLocal('moa_pin');
-    var h = '<h1>Settings</h1><div class="card">';
-    h += '<p><strong>Buttons backend:</strong> ' + (backendReady() ? '<span class="badge ok">connected</span>' : '<span class="badge todo">not configured</span> (add the Apps Script URL in <code>docs/config.json</code>)') + '</p>';
-    h += '<p><strong>PIN on this device:</strong> ' + (pin ? 'saved' : 'not saved') + '</p>';
-    h += '<div class="row"><button id="pinSet">' + (pin ? 'Change PIN' : 'Enter PIN') + '</button>' + (pin ? '<button id="pinDel">Forget PIN</button>' : '') + '<button id="pinTest">Test connection</button></div>';
-    h += '</div><div class="card"><p><strong>Theme</strong></p><div class="row">' +
+    var h = '<h1>Settings</h1><div class="card"><p><strong>Theme</strong></p><div class="row">' +
       ['auto', 'light', 'dark'].map(function (t) { return '<button class="chip' + ((getLocal('moa_theme') || 'auto') === t ? ' on' : '') + '" data-theme-set="' + t + '">' + t + '</button>'; }).join('') + '</div></div>';
-    h += '<p class="muted">Tip: print a lesson (browser menu → Print) to get a clean page without buttons or answers.</p>';
+    h += '<p class="muted">Your progress, feedback and questions are saved in the Google Sheet "Suivi Middle Office Academy". The teacher reads it every morning.</p>';
     app.innerHTML = h;
-    document.getElementById('pinSet').addEventListener('click', function () { delLocal('moa_pin'); askPin(); renderSettings(); });
-    var del = document.getElementById('pinDel');
-    if (del) del.addEventListener('click', function () { delLocal('moa_pin'); renderSettings(); });
-    document.getElementById('pinTest').addEventListener('click', function () {
-      post({ action: 'check_pin' }).then(function () { toast('Connected, PIN is correct.'); renderSettings(); }).catch(function () { renderSettings(); });
-    });
     app.querySelectorAll('[data-theme-set]').forEach(function (b) {
       b.addEventListener('click', function () { setLocal('moa_theme', b.getAttribute('data-theme-set')); applyTheme(); renderSettings(); });
     });
@@ -277,9 +345,10 @@
     else document.documentElement.removeAttribute('data-theme');
   }
 
+  var current = '/';
+  function go(hash) { current = hash.replace(/^#/, '') || '/'; route(); }
   function route() {
-    var hash = location.hash.replace(/^#/, '') || '/';
-    var parts = hash.split('?'), path = parts[0], query = parts[1] || '';
+    var parts = current.split('?'), path = parts[0], query = parts[1] || '';
     var m = /^\/lesson\/(\d+)$/.exec(path);
     var p;
     if (m) p = renderLesson(parseInt(m[1], 10));
@@ -287,21 +356,18 @@
     else if (path === '/ask') p = Promise.resolve(renderAsk(query));
     else if (path === '/settings') p = Promise.resolve(renderSettings());
     else if (S.index.latest) p = renderLesson(S.index.latest);
-    else { app.innerHTML = '<p>The first lesson is on its way.</p>'; p = Promise.resolve(); }
+    else { app.innerHTML = '<p>The first lesson is on its way: it appears here after the teacher\'s next morning run.</p>'; p = Promise.resolve(); }
     p.catch(function (e) { app.innerHTML = '<p>Could not load: ' + esc(e.message) + '</p>'; });
   }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#/"]');
+    if (a) { e.preventDefault(); go(a.getAttribute('href')); }
+  });
 
   applyTheme();
-  Promise.all([
-    getJSON('config.json').catch(function () { return {}; }),
-    getJSON('data/lessons.json')
-  ]).then(function (r) {
-    S.config = r[0] || {}; S.index = r[1];
-    return loadProgress();
-  }).then(function (p) {
-    S.progress = p || { lessons: {}, requests: [] };
-    updateProgressBar();
-    window.addEventListener('hashchange', route);
-    route();
-  }).catch(function (e) { app.innerHTML = '<p>Could not load the course: ' + esc(e.message) + '</p>'; });
+  call('getData').then(function (d) { setData(d); route(); })
+    .catch(function (e) { app.innerHTML = '<p>Could not load the course: ' + esc(e && e.message || e) + '</p>'; });
 })();
+</script>
+</body>
+</html>

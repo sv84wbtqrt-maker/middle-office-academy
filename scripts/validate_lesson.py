@@ -107,7 +107,7 @@ def main(argv=None):
 
     index = load_json(a.index)
     if index != build_index(lessons):
-        errors.append("docs/data/lessons.json is out of date: run python3 scripts/build_index.py")
+        errors.append("memory/lessons_index.json is out of date: run python3 scripts/build_index.py")
 
     if errors:
         print("\n".join("ERROR " + e for e in errors))
