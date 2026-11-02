@@ -1,0 +1,26 @@
+{
+ "lessons": [
+  {
+   "number": 1,
+   "date": "2026-11-02",
+   "module": "M1 · The big picture",
+   "title": "Front, middle and back office: where you fit",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "front office",
+    "middle office",
+    "back office",
+    "segregation of duties",
+    "p&l",
+    "limit",
+    "counterparty",
+    "hedging"
+   ],
+   "request_ids": [],
+   "words": 232,
+   "file": "lessons/001.json"
+  }
+ ],
+ "latest": 1
+}

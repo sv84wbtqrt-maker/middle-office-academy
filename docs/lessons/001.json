@@ -1,0 +1,46 @@
+{
+  "number": 1,
+  "date": "2026-11-02",
+  "module": "M1 · The big picture",
+  "title": "Front, middle and back office: where you fit",
+  "minutes": 13,
+  "story": "Welcome to your first day at **Northbridge Energy Trading**, the (fictional) trading desk of a large energy group. Your mentor **Sam**, head of middle office, gives you a coffee and draws three boxes on a whiteboard: *\"Before you learn any market, you must know who does what here, and why we never mix the roles.\"*",
+  "objective": "I can name the three offices of a trading floor, explain what each one does, and say why middle office must be independent.",
+  "write": [
+    {
+      "heading": "1. Why a trading department?",
+      "body": "An energy major produces, buys, refines and sells oil, gas and power. Its trading arm moves these flows to the best market, protects the group against price moves (**hedging**) and takes limited positions to make a profit."
+    },
+    {
+      "heading": "2. The three offices",
+      "body": "- **Front office**: traders and originators. They decide and enter trades. Goal: make profit within their limits.\n- **Middle office**: independent control of the front office. Checks trades, calculates the daily **P&L** (profit and loss) and risk, monitors **limits**, explains P&L changes.\n- **Back office** (operations): confirms trades with the counterparty, organises delivery, sends invoices, pays and receives cash."
+    },
+    {
+      "heading": "3. The golden rule",
+      "body": "**Segregation of duties**: the person who makes a trade must never be the person who checks it. Middle office reports to Risk or Finance, not to the traders. Without it, one trader can hide losses (Société Générale, 2008: €4.9 bn loss)."
+    },
+    {
+      "heading": "4. Key words",
+      "body": "- **P&L**: profit and loss, calculated every day.\n- **Limit**: the maximum risk a trader is allowed to take.\n- **Counterparty**: the company on the other side of the trade."
+    }
+  ],
+  "check": [
+    {
+      "q": "Name the three offices and give one task for each.",
+      "a": "Front office: decides and enters trades. Middle office: checks trades, calculates daily P&L and risk, monitors limits. Back office: confirms trades, organises delivery, invoices and settles cash."
+    },
+    {
+      "q": "Why must middle office be independent from the traders?",
+      "a": "Because the person who makes a trade must not be the one who checks it (segregation of duties). If traders controlled their own numbers, they could hide losses or take too much risk."
+    },
+    {
+      "q": "Who reports to whom: does middle office report to the head of trading?",
+      "a": "No. Middle office typically reports to Risk or Finance, outside the trading line, to stay independent."
+    }
+  ],
+  "read_more": "In the real world, TotalEnergies' trading activity sits in its **Trading & Shipping** organisation, with major hubs in **Geneva** (crude oil and refined products) and **London** (gas, LNG and power). Job titles vary between companies: you may also see *product control*, *risk control*, *trading control* or *valuation control* for tasks that belong to middle office. In all of them, the core is the same: **independent numbers, every day**.\n\n**Tip for your workbook**: write the date and the lesson number at the top of each page, and leave a small box at the bottom of the page for your answers to the questions.",
+  "next": "Tomorrow: why does an energy producer trade at all? Sam takes you to meet Chris, the crude oil trader.",
+  "concepts": ["front office", "middle office", "back office", "segregation of duties", "p&l", "limit", "counterparty", "hedging"],
+  "review": false,
+  "request_ids": []
+}
