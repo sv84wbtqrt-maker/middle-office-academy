@@ -24,7 +24,9 @@ web page (Apps Script web app) shows it -> the learner clicks "I have written it
 asks questions -> saved in the Sheet -> read by you the next morning.
 
 ## Hard rules
-- One new lesson only if the previous one is marked `written` in the Sheet (snapshot).
+- Keep **2 lessons ready in advance** (hidden on the page until the previous one is marked `written`),
+  never more: the last lesson allowed is (lessons written in a row) + 3. The learner can then do
+  several lessons a day; the reserve is refilled every morning.
 - The part to copy (`write` sections + `check` questions) stays within the word budget checked by
   `scripts/validate_lesson.py` (about 15 minutes of handwriting). Less is better than more.
 - Each lesson is new but builds on the previous ones, and is told inside the running story

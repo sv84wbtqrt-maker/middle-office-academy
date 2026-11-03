@@ -31,18 +31,25 @@ List the files of `Imports`. Every `lessons/NNN.json` of the repo must exist the
 `lesson_NNN.json`. Upload any missing one (see step 7 for how). This repairs a failed upload of a
 previous day and publishes lesson 1 on the first run.
 
-## 4. Decide if a new lesson is due
-Let N be `latest` in `memory/lessons_index.json`.
-- If lesson N already has today's date: stop after step 3.
-- If the snapshot says lesson N is not `"written"`: **no new lesson**. The web page keeps showing
-  lesson N. Commit only `memory/progress_snapshot.json` if it changed. End with: "Lesson N is not
-  marked as written yet: no new lesson today."
-- Otherwise prepare lesson N+1 dated today.
+## 4. Decide how many lessons to prepare (reserve of 2 lessons in advance)
+The learner can do several lessons a day: the web page shows every lesson up to the first one not
+marked written, and keeps the next ones hidden. As soon as they mark the current lesson as written,
+the next one opens immediately. Your job each morning is to keep **2 lessons ready in advance**.
+- W = the number of lessons marked written in a row from L1 (snapshot). N = `latest` in
+  `memory/lessons_index.json`. Target = W + 3 (the current lesson + 2 in advance).
+- If N >= Target: **no new lesson**. Commit only `memory/progress_snapshot.json` if it changed. End
+  with: "Reserve full: lessons up to L<N> are ready."
+- Otherwise prepare lessons N+1, N+2, ... up to Target (at most 3 in one run), one after the other,
+  each one following the previous one (story, `next` line, links). Date them today. For each one, do
+  steps 5 to 7.
+- Lessons not visible yet (numbers above W+1) may be rewritten to answer a new question or feedback:
+  upload a new `lesson_NNN.json` with the same name (the Apps Script keeps the most recent file),
+  and note it in the journal. Never rewrite a lesson the learner can already see.
 
 ## 5. Choose the content
 In this order of priority:
 1. **Learner questions**: the `requests` whose `id` is not in `state.json -> handled_requests`.
-   Answer the oldest one in this lesson, unless it clearly needs a concept that comes later: then put
+   Answer the oldest one in the first lesson you prepare (or rewrite the first hidden one), unless it clearly needs a concept that comes later: then put
    it in `scheduled_requests` with the planned lesson number (3 lessons later at most) and say so in
    the story ("You asked Sam about X; we will see it on day N+2, after Y"). A question can take the
    whole lesson or one section. List the ids answered in `request_ids`. Several small questions can

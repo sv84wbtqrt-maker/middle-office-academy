@@ -158,6 +158,15 @@ textarea { min-height: 100px; }
     }
     return out.join('');
   }
+  function todayISO() {
+    var d = new Date();
+    return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  }
+  /** Date shown for a lesson: the day it was marked written, otherwise today. */
+  function lessonDate(l) {
+    var e = lessonEntry(l.number);
+    return (e.status === 'written' && e.at) ? String(e.at).slice(0, 10) : todayISO();
+  }
   function fmtDate(iso) {
     try { return new Date(iso + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
     catch (e) { return iso; }
@@ -181,10 +190,18 @@ textarea { min-height: 100px; }
     });
   }
   function setData(d) {
-    S.index = { lessons: d.lessons, latest: d.lessons.length ? d.lessons[d.lessons.length - 1].number : 0 };
-    S.cache = {};
-    d.lessons.forEach(function (l) { S.cache[l.number] = l; });
     S.progress = { lessons: d.progress || {}, requests: d.requests || [] };
+    // Lessons prepared in advance stay hidden: visible = all lessons up to the first one not written yet.
+    var all = d.lessons.slice().sort(function (a, b) { return a.number - b.number; });
+    var visible = [];
+    for (var i = 0; i < all.length; i++) {
+      visible.push(all[i]);
+      if (lessonStatus(all[i].number) !== 'written') break;
+    }
+    S.reserve = all.length - visible.length;
+    S.index = { lessons: visible, latest: visible.length ? visible[visible.length - 1].number : 0 };
+    S.cache = {};
+    visible.forEach(function (l) { S.cache[l.number] = l; });
     updateProgressBar();
   }
   function post(fn) {
@@ -215,11 +232,11 @@ textarea { min-height: 100px; }
     return loadLesson(n).then(function (l) {
       var latest = n === S.index.latest;
       var h = '';
-      h += '<div class="meta"><span>Lesson ' + l.number + '</span><span>' + esc(fmtDate(l.date)) + '</span><span>' + esc(l.module) + '</span><span>≈ ' + l.minutes + ' min of writing</span></div>';
+      h += '<div class="meta"><span>Lesson ' + l.number + '</span><span>' + esc(fmtDate(lessonDate(l))) + '</span><span>' + esc(l.module) + '</span><span>≈ ' + l.minutes + ' min of writing</span></div>';
       h += '<h1>' + esc(l.title) + (l.review ? ' <span class="badge todo">review</span>' : '') + '</h1>';
       h += '<div class="label">Read, don\'t copy</div><div class="story">' + md(l.story) + '</div>';
       h += '<div class="paper"><div class="label write">✍️ Copy into your workbook</div>';
-      h += '<p><strong>L' + l.number + ' · ' + esc(l.date) + ' · ' + esc(l.title) + '</strong></p>';
+      h += '<p><strong>L' + l.number + ' · ' + esc(lessonDate(l)) + ' · ' + esc(l.title) + '</strong></p>';
       h += '<p class="objective">' + inline(l.objective) + '</p>';
       l.write.forEach(function (s) { h += '<h3>' + inline(s.heading) + '</h3>' + md(s.body); });
       h += '<h3>Check yourself (copy the questions, answer from memory)</h3>';
@@ -254,10 +271,10 @@ textarea { min-height: 100px; }
     var st = lessonStatus(l.number), fb = lessonEntry(l.number).feedback || {};
     var h = '<section class="card actions"><div class="label">Your progress</div>';
     if (st === 'written') {
-      h += '<div class="status ok">✓ Written. ' + (latest ? 'Your next lesson arrives tomorrow morning.' : '') + '</div>';
+      h += '<div class="status ok">✓ Written. ' + (latest ? 'Your next lesson arrives tomorrow morning (the lessons prepared in advance are all done: well done!).' : '') + '</div>';
       h += '<div class="row"><button data-status="not_written">Undo: I haven\'t written it</button></div>';
     } else {
-      h += '<div class="status warn">' + (latest ? 'Not written yet. The next lesson is published only after you mark this one as written: take your time.' : 'Not marked as written.') + '</div>';
+      h += '<div class="status warn">' + (latest ? 'Not written yet. When you mark it as written, ' + (S.reserve > 0 ? 'the next lesson opens immediately (' + S.reserve + ' ready in advance).' : 'the next lesson arrives the next morning.') : 'Not marked as written.') + '</div>';
       h += '<div class="row"><button class="primary" data-status="written">✓ I have written this lesson</button></div>';
     }
     h += '<div class="row"><span class="muted">Difficulty:</span>' +
@@ -283,8 +300,14 @@ textarea { min-height: 100px; }
         var status = b.getAttribute('data-status');
         b.disabled = true;
         post('setStatus', l.number, status).then(function () {
-          toast(status === 'written' ? 'Well done! Saved.' : 'Saved.');
-          updateProgressBar(); renderLesson(l.number);
+          updateProgressBar();
+          if (status === 'written' && S.index.latest > l.number) {
+            toast('Well done! Lesson ' + S.index.latest + ' is open.');
+            renderLesson(S.index.latest);
+          } else {
+            toast(status === 'written' ? 'Well done! Saved.' : 'Saved.');
+            renderLesson(Math.min(l.number, S.index.latest));
+          }
         }).catch(function () { b.disabled = false; });
       });
     });
@@ -305,7 +328,7 @@ textarea { min-height: 100px; }
     list.forEach(function (l) {
       if (l.module !== module) { if (module !== null) h += '</ul>'; module = l.module; h += '<div class="module-title">' + esc(module) + '</div><ul class="list">'; }
       var st = lessonStatus(l.number);
-      h += '<li><span class="num">' + l.number + '</span><a href="#/lesson/' + l.number + '">' + esc(l.title) + '<br><span class="muted" style="font-size:13px">' + esc(l.date) + ' · ≈ ' + l.minutes + ' min</span></a>' +
+      h += '<li><span class="num">' + l.number + '</span><a href="#/lesson/' + l.number + '">' + esc(l.title) + '<br><span class="muted" style="font-size:13px">' + (lessonStatus(l.number) === 'written' ? esc(lessonDate(l)) + ' · ' : '') + '≈ ' + l.minutes + ' min</span></a>' +
         '<span class="badge ' + (st === 'written' ? 'ok">written' : 'todo">to write') + '</span></li>';
     });
     if (list.length) h += '</ul>';

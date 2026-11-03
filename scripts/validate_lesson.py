@@ -17,6 +17,7 @@ REQUIRED = {"number": int, "date": str, "module": str, "title": str, "minutes": 
             "objective": str, "write": list, "check": list, "next": str, "concepts": list,
             "review": bool, "request_ids": list}
 OPTIONAL = {"read_more": str, "links": list}
+AHEAD = 2  # lessons prepared in advance, hidden until the previous one is written
 REF = re.compile(r"→\s*L(\d+)")
 
 
@@ -103,18 +104,21 @@ def main(argv=None):
     if nums != list(range(1, len(nums) + 1)):
         errors.append("lesson numbers must be 1..N without gaps: %s" % nums)
     dates = [l["date"] for _, l in lessons]
-    if any(b <= a_ for a_, b in zip(dates, dates[1:])):
-        errors.append("lesson dates must be strictly increasing (one lesson per day max)")
+    if any(b < a_ for a_, b in zip(dates, dates[1:])):
+        errors.append("lesson dates must not go backwards")
     titles = [l["title"].strip().lower() for _, l in lessons]
     if len(set(titles)) != len(titles):
         errors.append("two lessons have the same title")
 
     progress = load_json(a.progress, {}) or {}
     status = progress.get("lessons", {})
-    for _, l in lessons[1:]:
-        prev = str(l["number"] - 1)
-        if status.get(prev, {}).get("status") != "written":
-            errors.append("lesson %d exists but lesson %s is not marked written" % (l["number"], prev))
+    written = 0  # all lessons 1..written are marked written
+    while status.get(str(written + 1), {}).get("status") == "written":
+        written += 1
+    max_allowed = written + 1 + AHEAD
+    if nums and nums[-1] > max_allowed:
+        errors.append("lesson %d is too far ahead: lessons 1..%d are written, so the last lesson allowed is %d "
+                      "(the current one + %d in advance)" % (nums[-1], written, max_allowed, AHEAD))
     request_ids = {r.get("id") for r in progress.get("requests", [])}
     for _, l in lessons:
         for rid in l["request_ids"]:

@@ -40,9 +40,10 @@ class ValidatorTest(unittest.TestCase):
     def test_first_lesson_within_budget(self):
         self.assertTrue(140 <= copied_words(BASE) <= 320)
 
-    def test_second_lesson_requires_written(self):
-        ls = [self.lesson(1, "2026-11-02"), self.lesson(2, "2026-11-03")]
-        self.assertEqual(self.run_case(ls), 1)
+    def test_at_most_two_lessons_in_advance(self):
+        ls = [self.lesson(i, "2026-11-02") for i in range(1, 5)]
+        self.assertEqual(self.run_case(ls[:3]), 0)          # current + 2 in advance
+        self.assertEqual(self.run_case(ls), 1)              # 3 in advance: refused
         ok = {"lessons": {"1": {"status": "written"}}, "requests": []}
         self.assertEqual(self.run_case(ls, ok), 0)
 
@@ -51,9 +52,11 @@ class ValidatorTest(unittest.TestCase):
         l["write"].append({"heading": "Extra", "body": "word " * 200})
         self.assertEqual(self.run_case([l]), 1)
 
-    def test_one_lesson_per_day(self):
-        ls = [self.lesson(1, "2026-11-02"), self.lesson(2, "2026-11-02")]
-        self.assertEqual(self.run_case(ls, {"lessons": {"1": {"status": "written"}}, "requests": []}), 1)
+    def test_dates_do_not_go_backwards(self):
+        ls = [self.lesson(1, "2026-11-03"), self.lesson(2, "2026-11-02")]
+        self.assertEqual(self.run_case(ls), 1)
+        ls[1]["date"] = "2026-11-03"
+        self.assertEqual(self.run_case(ls), 0)
 
     def test_seventh_lesson_is_review(self):
         ls = [self.lesson(i, "2026-11-%02d" % (i + 1)) for i in range(1, 8)]
