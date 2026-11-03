@@ -20,7 +20,27 @@
    "request_ids": [],
    "links": [],
    "words": 232
+  },
+  {
+   "number": 2,
+   "date": "2026-11-03",
+   "module": "M1 · The big picture",
+   "title": "Why an energy major trades",
+   "minutes": 14,
+   "review": false,
+   "concepts": [
+    "optimisation",
+    "arbitrage",
+    "taking positions",
+    "book",
+    "barrel (bbl)"
+   ],
+   "request_ids": [],
+   "links": [
+    1
+   ],
+   "words": 216
   }
  ],
- "latest": 1
+ "latest": 2
 }

@@ -1,0 +1,45 @@
+{
+  "number": 2,
+  "date": "2026-11-03",
+  "module": "M1 · The big picture",
+  "title": "Why an energy major trades",
+  "minutes": 14,
+  "story": "Day two at Northbridge. Sam walks you to the front office and introduces **Chris**, the crude oil trader, who is looking at four screens at the same time. Chris smiles: *\"People think we just gamble on prices. In fact, most of my job is moving the group's oil to the right place, at the right time, without losing money if prices move.\"*",
+  "objective": "I can explain the four reasons why an energy major has a trading department, with one example for each.",
+  "write": [
+    {
+      "heading": "1. Four reasons to trade",
+      "body": "1. **Optimise the group's flows**: sell the oil and gas the group produces, and buy what its refineries need, at the best price and place.\n2. **Serve customers**: supply energy to airlines, utilities, industry.\n3. **Manage price risk** (**hedging**, → L1): fix today the price of a future sale or purchase.\n4. **Take positions**: bet on a price move to make a profit, but only within **limits** (→ L1)."
+    },
+    {
+      "heading": "2. Example: arbitrage",
+      "body": "**Arbitrage** = sending a product where it is worth more. Example with illustrative numbers:\n\n| | Europe | Asia |\n|---|---|---|\n| Crude price | $80/bbl | $82.5/bbl |\n| Extra freight to Asia | | $1.5/bbl |\n\nGain from going to Asia: 82.5 − 80 − 1.5 = **$1/bbl**. On a cargo of 600,000 barrels (**bbl**): **$600,000**."
+    },
+    {
+      "heading": "3. What it means for middle office",
+      "body": "Each activity is kept in a **book**: a group of trades with its own trader, strategy and limits. Middle office calculates the **P&L** of each book every day (→ L1) and checks that a \"hedging\" book really reduces risk."
+    }
+  ],
+  "check": [
+    {
+      "q": "Give the four reasons why an energy major trades.",
+      "a": "Optimise the group's flows, serve customers, manage price risk (hedging), and take positions within limits."
+    },
+    {
+      "q": "What is arbitrage? Calculate the gain per barrel: Europe $70, Asia $73, extra freight $2.",
+      "a": "Arbitrage is sending a product to the market where it is worth more. Gain: 73 − 70 − 2 = $1 per barrel."
+    },
+    {
+      "q": "What is a book, and what does middle office do with it?",
+      "a": "A book is a group of trades with its own trader, strategy and limits. Middle office calculates its daily P&L and checks that its trades match its purpose (for example, that a hedging book reduces risk)."
+    }
+  ],
+  "read_more": "Integrated energy companies such as TotalEnergies produce, refine and sell energy, so their trading arm sits between all these activities: it is where the group's physical flows meet the markets. That is why trading in a major is often described as **\"optimisation\"** rather than pure speculation. Note that a real arbitrage is never free of risk: prices can move during the voyage, and freight, insurance and financing costs must be included. Middle office will check all these costs in the P&L.",
+  "next": "Next lesson: the energy value chain, from the oil field to the petrol station, and where trading sits in it.",
+  "concepts": ["optimisation", "arbitrage", "taking positions", "book", "barrel (bbl)"],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 1, "why": "hedging, limits and daily P&L, defined in L1, are the tools behind the four reasons to trade"}
+  ]
+}

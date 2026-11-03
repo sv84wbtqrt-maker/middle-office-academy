@@ -1,5 +1,7 @@
 {
- "lessons": {},
+ "lessons": {
+  "1": {"status": "written", "at": "2026-11-02", "feedback": {"difficulty": "right", "length": "right"}}
+ },
  "requests": [],
- "updated_at": null
+ "read_at": "2026-11-03T17:00:00Z"
 }

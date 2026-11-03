@@ -19,3 +19,13 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 
 > Note (2026-11-03): from L2, every lesson links back to earlier lessons with (→ L<n>) in the text to
 > copy and in the `links` field. The learner writes "L<n> · date · title" at the top of each page.
+
+## Lesson 2 · 2026-11-03 · Why an energy major trades
+- Module: M1 · The big picture
+- Written by the teacher during a chat session (the 05:47 scheduled run had no Google Drive connector and published nothing).
+- Taught: four reasons to trade (optimise group flows, serve customers, hedging, taking positions within limits), arbitrage with an illustrative calculation, barrel (bbl), book.
+- Links made: (→ L1) hedging, limits, daily P&L.
+- Story: Chris (crude oil trader) introduced; says most of the job is moving the group's oil, not gambling.
+- Planted for later: freight costs (M2 shipping lesson), "a hedging book must reduce risk" (M3 hedging, M6 risk), 600,000 bbl cargo size (reused for Cargo NS-01 in lesson 20).
+- Learner feedback seen: L1 difficulty right, length right (keep about 230 to 270 words).
+- Questions answered: none (no question in the Sheet).
