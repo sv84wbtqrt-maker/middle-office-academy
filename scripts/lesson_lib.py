@@ -14,7 +14,7 @@ STATE_FILE = ROOT / "memory" / "state.json"
 MIN_WORDS = 140
 MAX_WORDS = 320
 
-_MD = re.compile(r"[*_`#>|]+")
+_MD = re.compile(r"[*_`#>|→]+")
 
 
 def words(text):
@@ -59,6 +59,7 @@ def build_index(lessons):
             "review": l["review"],
             "concepts": l["concepts"],
             "request_ids": l["request_ids"],
+            "links": [k["lesson"] for k in l.get("links", [])],
             "words": copied_words(l),
         })
     items.sort(key=lambda x: x["number"])

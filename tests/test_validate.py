@@ -29,6 +29,9 @@ class ValidatorTest(unittest.TestCase):
     def lesson(self, n, date, title=None):
         l = copy.deepcopy(BASE)
         l.update(number=n, date=date, title=title or "Lesson %d" % n, review=(n % 7 == 0))
+        if n >= 2:
+            l["links"] = [{"lesson": n - 1, "why": "builds on it"}]
+            l["write"][0]["body"] += " (→ L%d)" % (n - 1)
         return l
 
     def test_repo_is_valid(self):
@@ -58,6 +61,17 @@ class ValidatorTest(unittest.TestCase):
         self.assertEqual(self.run_case(ls, prog), 0)
         ls[6]["review"] = False
         self.assertEqual(self.run_case(ls, prog), 1)
+
+    def test_links_required_and_written(self):
+        prog = {"lessons": {"1": {"status": "written"}}, "requests": []}
+        l2 = self.lesson(2, "2026-11-03")
+        self.assertEqual(self.run_case([self.lesson(1, "2026-11-02"), l2], prog), 0)
+        no_link = copy.deepcopy(l2); no_link.pop("links")
+        self.assertEqual(self.run_case([self.lesson(1, "2026-11-02"), no_link], prog), 1)
+        not_written = copy.deepcopy(l2); not_written["write"][0]["body"] = "plain text"
+        self.assertEqual(self.run_case([self.lesson(1, "2026-11-02"), not_written], prog), 1)
+        future = copy.deepcopy(l2); future["links"] = [{"lesson": 5, "why": "x"}]
+        self.assertEqual(self.run_case([self.lesson(1, "2026-11-02"), future], prog), 1)
 
     def test_unknown_request_rejected(self):
         l = self.lesson(1, "2026-11-02")

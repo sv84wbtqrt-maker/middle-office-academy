@@ -6,6 +6,7 @@ Usage: python3 scripts/validate_lesson.py [--lessons DIR --progress FILE --index
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -15,7 +16,8 @@ from lesson_lib import (INDEX_FILE, LESSONS_DIR, MAX_WORDS, MIN_WORDS, PROGRESS_
 REQUIRED = {"number": int, "date": str, "module": str, "title": str, "minutes": int, "story": str,
             "objective": str, "write": list, "check": list, "next": str, "concepts": list,
             "review": bool, "request_ids": list}
-OPTIONAL = {"read_more": str}
+OPTIONAL = {"read_more": str, "links": list}
+REF = re.compile(r"→\s*L(\d+)")
 
 
 def check_lesson(path, l, errors):
@@ -54,6 +56,25 @@ def check_lesson(path, l, errors):
     if not MIN_WORDS <= n <= MAX_WORDS:
         errors.append("%s: %d words to copy, budget is %d to %d (15 minutes of handwriting max)"
                       % (tag, n, MIN_WORDS, MAX_WORDS))
+    links = l.get("links", [])
+    for k in links:
+        if not isinstance(k, dict) or not isinstance(k.get("lesson"), int) or not k.get("why"):
+            errors.append("%s: each link needs lesson (int) and why" % tag)
+        elif not 1 <= k["lesson"] < l["number"]:
+            errors.append("%s: link to L%s must point to an earlier lesson" % (tag, k.get("lesson")))
+    if l["number"] >= 2:
+        if not links:
+            errors.append("%s: from lesson 2, at least one link to an earlier lesson is required" % tag)
+        copied = l["objective"] + " ".join(s["heading"] + " " + s["body"] for s in l["write"]) + " ".join(c["q"] for c in l["check"])
+        refs = {int(x) for x in REF.findall(copied)}
+        for r in refs:
+            if not 1 <= r < l["number"]:
+                errors.append("%s: (→ L%d) in the text must point to an earlier lesson" % (tag, r))
+        missing = {k["lesson"] for k in links if isinstance(k, dict) and isinstance(k.get("lesson"), int)} - refs
+        if links and not refs:
+            errors.append("%s: write the links in the text to copy as (→ L<number>)" % tag)
+        elif missing:
+            errors.append("%s: links %s are not written in the text as (→ L<number>)" % (tag, sorted(missing)))
     if l["number"] % 7 == 0 and not l["review"]:
         errors.append("%s: lesson %d is a multiple of 7, it must be a review lesson" % (tag, l["number"]))
     if l["number"] % 7 != 0 and l["review"]:

@@ -16,3 +16,6 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: hedging (deepened in M3 lesson 33), Société Générale 2008 case (full lesson in M9), real titles "product control / risk control" (M11 career lessons).
 - Words to copy: 232.
 - Learner feedback: none yet.
+
+> Note (2026-11-03): from L2, every lesson links back to earlier lessons with (→ L<n>) in the text to
+> copy and in the `links` field. The learner writes "L<n> · date · title" at the top of each page.

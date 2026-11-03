@@ -67,11 +67,19 @@ Follow `schema/lesson.schema.json` and the style of `lessons/001.json`:
   ("Draw: three boxes...") so the learner can sketch them.
 - `check`: 2 to 4 questions answered from memory; full answers in `a`.
 - `read_more` (optional, read only): real-world context, TotalEnergies public facts, sources.
+- **Links between lessons (required from lesson 2)**: every lesson is numbered (L1, L2, ...) and the
+  learner writes the number at the top of each workbook page, so they can flip back. In the text
+  to copy, write each link as `(→ L<number>)` right where the old idea is reused, e.g. "The trader
+  is in the front office (→ L1)." List the same links in `links` with a short `why`. Aim for 1 to 3
+  links per lesson: always one to a recent lesson, and when possible one to an older lesson
+  (more than 5 lessons back), to bring old ideas back to mind. Review lessons link to the six
+  lessons they recap. Check `links` in `memory/lessons_index.json` to see which lessons were not
+  reused for a long time.
 - `next`: one-sentence teaser. `concepts`: new concepts (lowercase). `review`: true only for multiples of 7.
 - `minutes`: words to copy / 20, rounded up, between 8 and 15.
 
 Then:
-- Append an entry to `memory/journal.md` (taught, story, planted for later, words to copy, learner
+- Append an entry to `memory/journal.md` (taught, links made (→ L..), story, planted for later, words to copy, learner
   feedback seen, questions answered).
 - Update `memory/state.json` (`handled_requests`, `scheduled_requests`, `current_module`,
   `story_objects`, `pace_notes`). If the plan changed, add a line to `curriculum/roadmap.md`.

@@ -52,6 +52,7 @@ h2 { font-size: 1.1rem; margin: 28px 0 8px; }
 .paper p, .paper ul, .paper ol { margin: 0 0 4px; }
 .paper ul, .paper ol { padding-left: 22px; }
 .paper .objective { font-style: italic; }
+.lref { white-space: nowrap; font-weight: 600; text-decoration: none; }
 table { border-collapse: collapse; margin: 6px 0; font-size: 15px; width: 100%; display: block; overflow-x: auto; }
 th, td { border: 1px solid var(--line); padding: 2px 8px; text-align: left; line-height: 1.5; }
 .q { margin: 10px 0; }
@@ -124,7 +125,8 @@ textarea { min-height: 100px; }
       .replace(/`([^`]+)`/g, '<code>$1</code>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
-      .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/→\s*L(\d+)/g, '<a class="lref" href="#/lesson/$1">→ L$1</a>');
   }
   /** Minimal Markdown: paragraphs, - and 1. lists, | tables |, **bold**, *italic*, links. */
   function md(text) {
@@ -217,7 +219,7 @@ textarea { min-height: 100px; }
       h += '<h1>' + esc(l.title) + (l.review ? ' <span class="badge todo">review</span>' : '') + '</h1>';
       h += '<div class="label">Read, don\'t copy</div><div class="story">' + md(l.story) + '</div>';
       h += '<div class="paper"><div class="label write">✍️ Copy into your workbook</div>';
-      h += '<p><strong>Lesson ' + l.number + ' · ' + esc(l.date) + ' · ' + esc(l.title) + '</strong></p>';
+      h += '<p><strong>L' + l.number + ' · ' + esc(l.date) + ' · ' + esc(l.title) + '</strong></p>';
       h += '<p class="objective">' + inline(l.objective) + '</p>';
       l.write.forEach(function (s) { h += '<h3>' + inline(s.heading) + '</h3>' + md(s.body); });
       h += '<h3>Check yourself (copy the questions, answer from memory)</h3>';
@@ -226,6 +228,18 @@ textarea { min-height: 100px; }
       });
       h += '</div>';
       if (l.read_more) h += '<div class="card"><div class="label">Going further (read only)</div>' + md(l.read_more) + '</div>';
+      var later = S.index.lessons.filter(function (x) { return (x.links || []).some(function (k) { return k.lesson === l.number; }); });
+      if ((l.links || []).length || later.length) {
+        h += '<div class="card"><div class="label">Connections between lessons</div>';
+        if ((l.links || []).length) h += '<p><strong>Builds on:</strong></p><ul>' + l.links.map(function (k) {
+          var t = S.cache[k.lesson] ? ' ' + esc(S.cache[k.lesson].title) : '';
+          return '<li><a href="#/lesson/' + k.lesson + '">L' + k.lesson + t + '</a>: ' + inline(k.why) + '</li>';
+        }).join('') + '</ul>';
+        if (later.length) h += '<p><strong>Used again in:</strong> ' + later.map(function (x) {
+          return '<a href="#/lesson/' + x.number + '">L' + x.number + '</a>';
+        }).join(' · ') + '</p>';
+        h += '</div>';
+      }
       h += '<p class="muted"><strong>Next:</strong> ' + inline(l.next) + '</p>';
       h += actions(l, latest);
       h += '<div class="pager">' + (n > 1 ? '<a href="#/lesson/' + (n - 1) + '">← Lesson ' + (n - 1) + '</a>' : '<span></span>') +

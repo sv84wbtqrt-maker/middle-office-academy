@@ -29,6 +29,8 @@ asks questions -> saved in the Sheet -> read by you the next morning.
   `scripts/validate_lesson.py` (about 15 minutes of handwriting). Less is better than more.
 - Each lesson is new but builds on the previous ones, and is told inside the running story
   (the learner is a new middle office analyst at a fictional energy trading desk).
+- Lessons are numbered L1, L2, ... From L2, each lesson links back to earlier ones: `(→ L<n>)` in the
+  text to copy, and the `links` field (checked by the validator).
 - Facts: no invented numbers presented as real, no invented TotalEnergies internal details (systems,
   team names, figures). Use clearly labelled illustrative numbers. Say "typically" when practice varies.
 - Plain, simple English (B1/B2 level): short sentences, define every new term the first time.
