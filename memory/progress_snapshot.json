@@ -1,7 +1,1 @@
-{
- "lessons": {
-  "1": {"status": "written", "at": "2026-11-02", "feedback": {"difficulty": "right", "length": "right"}}
- },
- "requests": [],
- "read_at": "2026-11-03T17:00:00Z"
-}
+{"lessons": {"1": {"status": "written", "at": "2026-11-02", "feedback": {"difficulty": "right", "length": "right"}}, "2": {"status": "written", "at": "2026-11-03", "feedback": {"difficulty": "right", "length": "right"}}}, "requests": [], "read_at": "2026-11-04T06:00:00Z"}

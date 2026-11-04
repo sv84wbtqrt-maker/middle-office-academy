@@ -1,0 +1,51 @@
+{
+  "number": 5,
+  "date": "2026-11-04",
+  "module": "M1 · The big picture",
+  "title": "Physical vs paper trading",
+  "minutes": 13,
+  "story": "Day five. Chris shows you two screens. On the left: a tanker moving across the sea. On the right: a price chart. \"Left is the real oil. Right is a contract on its price. We trade both, and a good trader never forgets which is which.\"",
+  "objective": "I can explain the difference between physical and paper trading and why a desk uses both.",
+  "write": [
+    {
+      "heading": "1. Two kinds of trade",
+      "body": "- **Physical trade**: real oil, gas or power is delivered. Needs ships, pipelines, contracts and invoices.\n- **Paper trade** (financial trade): no delivery. Only cash is paid, based on a price. Examples: **futures**, **swaps**, **options**."
+    },
+    {
+      "heading": "2. Why use both?",
+      "body": "A physical cargo is exposed to price moves (→ L2). The desk can sell a paper contract to **hedge** it: if the price falls, the loss on the cargo is offset by a gain on paper (→ L1)."
+    },
+    {
+      "heading": "3. Example (illustrative)",
+      "body": "Physical: the desk owns 600,000 bbl bought at $80. Price falls to $75: loss of $5 x 600,000 = **$3,000,000**.\nPaper: the desk sold the same quantity at $80. It gains $3,000,000.\nNet result: about **zero**."
+    },
+    {
+      "heading": "4. Middle office",
+      "body": "Two sets of controls: for physical, we check quantities, contracts and delivery (→ L4). For paper, we check price, volume and counterparty. The P&L of both is added every day."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is the difference between a physical and a paper trade?",
+      "a": "A physical trade delivers real product. A paper trade is financial: only cash is paid, with no delivery."
+    },
+    {
+      "q": "Why would a desk sell a paper contract against a physical cargo?",
+      "a": "To hedge: a price fall that hurts the cargo is offset by a gain on the paper contract."
+    },
+    {
+      "q": "Cargo: 100,000 bbl bought at $80, price now $78. Loss? Paper sold at $80 gain?",
+      "a": "Loss: 2 x 100,000 = $200,000. Paper gain: also $200,000. Net: zero."
+    }
+  ],
+  "read_more": "In practice a hedge is rarely perfect: the paper contract may follow a slightly different price from the physical cargo (this gap is called basis risk, studied in module 3). Middle office watches that gap. The numbers above are illustrative, not real prices.",
+  "next": "Next lesson: a day in the life of a middle office analyst, and the daily reports you will produce.",
+  "concepts": ["physical trade", "paper trade", "futures", "swaps", "options", "hedge example"],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 2, "why": "the 600,000 bbl cargo and the hedging reason reappear"},
+    {"lesson": 4, "why": "physical controls rely on quantities and units"},
+    {"lesson": 1, "why": "hedging was first defined there"}
+  ]
+}

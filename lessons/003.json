@@ -1,0 +1,50 @@
+{
+  "number": 3,
+  "date": "2026-11-04",
+  "module": "M1 · The big picture",
+  "title": "The energy value chain: where trading sits",
+  "minutes": 12,
+  "story": "Day three. Sam hands you a sheet of paper with one long arrow drawn on it. \"Chris moves oil, Dana moves gas, but they all work on the same journey: from the ground to the customer. If you know the journey, you will understand every trade we book.\"",
+  "objective": "I can describe the energy value chain in three steps and explain where a trading desk fits in it.",
+  "write": [
+    {
+      "heading": "1. The three steps",
+      "body": "- **Upstream**: find and produce oil and gas (wells, platforms).\n- **Midstream**: move and store it (pipelines, tankers, terminals, storage).\n- **Downstream**: refine and sell it (refineries, petrol stations, power plants, industry)."
+    },
+    {
+      "heading": "2. Where trading sits",
+      "body": "Trading sits **between** the steps. The desk buys the group's production (upstream), ships it (midstream) and sells it to refineries and customers (downstream). It also buys from and sells to other companies. Each sale is a reason to trade (→ L2)."
+    },
+    {
+      "heading": "3. Example: one barrel's journey",
+      "body": "Draw: a long arrow with four boxes: Well → Tanker → Refinery → Customer.\n\nAt each box, the owner of the oil changes or the price changes. Trades capture these changes. Each trade is entered in a **book** (→ L2) by the front office (→ L1)."
+    },
+    {
+      "heading": "4. Why middle office cares",
+      "body": "Oil can be bought in one place and sold in another weeks later. During that time, the price moves. Middle office values the oil every day (**mark-to-market**: valuing a position at today's market price) and reports the **P&L**."
+    }
+  ],
+  "check": [
+    {
+      "q": "Name the three steps of the energy value chain, with one example each.",
+      "a": "Upstream: producing oil and gas (wells). Midstream: transport and storage (pipelines, tankers). Downstream: refining and selling (refineries, petrol stations)."
+    },
+    {
+      "q": "Where does a trading desk sit in the chain?",
+      "a": "Between the steps: it buys production, arranges transport and sells to refineries and customers."
+    },
+    {
+      "q": "Why does middle office value oil every day, even before it is sold?",
+      "a": "Because prices move while the oil is in transit or storage, so the P&L changes every day (mark-to-market)."
+    }
+  ],
+  "read_more": "TotalEnergies is an integrated company: it is present upstream (production), midstream (shipping, LNG) and downstream (refining, retail, power). Its Trading & Shipping organisation connects these activities to the markets. Check the company's public website and annual report for the exact description of its activities.",
+  "next": "Next lesson: the products traded: crude, refined products, gas, LNG, power, carbon and freight.",
+  "concepts": ["upstream", "midstream", "downstream", "value chain", "mark-to-market"],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 2, "why": "each step of the chain creates a reason to trade and a book"},
+    {"lesson": 1, "why": "the front office enters the trades that follow the chain"}
+  ]
+}

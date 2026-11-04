@@ -29,3 +29,30 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: freight costs (M2 shipping lesson), "a hedging book must reduce risk" (M3 hedging, M6 risk), 600,000 bbl cargo size (reused for Cargo NS-01 in lesson 20).
 - Learner feedback seen: L1 difficulty right, length right (keep about 230 to 270 words).
 - Questions answered: none (no question in the Sheet).
+
+## Lesson 3 · 2026-11-04 · The energy value chain: where trading sits
+- Module: M1 · The big picture
+- Taught: upstream / midstream / downstream, where trading sits, mark-to-market (one-line definition).
+- Links made: (→ L2) reasons to trade and book, (→ L1) front office.
+- Story: Sam's arrow drawing of the journey from ground to customer.
+- Planted for later: mark-to-market (deepened in M5 P&L), TotalEnergies integrated model (public facts only).
+- Words to copy: 220.
+- Learner feedback seen: L1 and L2 right/right. Questions answered: none (no question in the Sheet).
+
+## Lesson 4 · 2026-11-04 · What we trade: the main energy products
+- Module: M1 · The big picture
+- Taught: crude, refined products, natural gas, LNG, power, carbon, freight; usual units (bbl, tonne, MWh, MMBtu); unit check.
+- Links made: (→ L2) barrel, (→ L3) value chain, (→ L1) middle office checks.
+- Story: Sam walks the floor; Chris (oil) and Dana (gas and power) seen at work.
+- Planted for later: carbon (M2 lesson 12), freight (M2 lesson 19), unit conversions.
+- Words to copy: 168 (short; L5 and next ones can be a bit denser).
+
+## Lesson 5 · 2026-11-04 · Physical vs paper trading
+- Module: M1 · The big picture
+- Taught: physical vs paper trades, hedge example with illustrative numbers (600,000 bbl, $80 to $75), controls for each.
+- Links made: (→ L2) cargo and hedging, (→ L4) units and quantities, (→ L1) hedging.
+- Story: Chris's two screens (tanker and price chart).
+- Planted for later: basis risk (M3 lesson 33), futures/swaps/options (M3), Cargo NS-01 (lesson 20).
+- Words to copy: 202.
+
+> Note (2026-11-04): the learner had done L1 and L2, so L3 to L5 were prepared at once (reserve of 2 in advance). Next: L6 (day in the life), L7 is a review.

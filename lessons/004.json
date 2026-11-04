@@ -1,0 +1,50 @@
+{
+  "number": 4,
+  "date": "2026-11-04",
+  "module": "M1 · The big picture",
+  "title": "What we trade: the main energy products",
+  "minutes": 13,
+  "story": "Day four. Sam walks you along the trading floor. Chris trades crude oil, Dana trades gas and power. \"Each product has its own market, its own unit and its own risks,\" says Sam. \"Learn the list first, details come later.\"",
+  "objective": "I can name the main traded energy products and give the usual unit of each.",
+  "write": [
+    {
+      "heading": "1. Oil",
+      "body": "- **Crude oil**: raw oil from the ground. Unit: **barrel (bbl)** (→ L2).\n- **Refined products**: made in refineries (diesel, jet fuel, petrol, fuel oil). Unit: usually **tonne** or barrel."
+    },
+    {
+      "heading": "2. Gas and power",
+      "body": "- **Natural gas**: moved by pipeline. Unit: **MWh** (megawatt-hour, an amount of energy).\n- **LNG**: gas cooled to liquid so ships can carry it. Typical unit: **MMBtu**.\n- **Power** (electricity): cannot be stored easily. Unit: MWh."
+    },
+    {
+      "heading": "3. Other markets",
+      "body": "- **Carbon**: the right to emit one tonne of CO2.\n- **Freight**: the price of shipping, traded too."
+    },
+    {
+      "heading": "4. Why units matter",
+      "body": "Example (illustrative): a trade says 100,000 but the unit is not written. Is it barrels, tonnes or MWh? Middle office checks the **unit** on every trade (→ L1). A wrong unit means a wrong P&L (→ L3)."
+    }
+  ],
+  "check": [
+    {
+      "q": "Give the usual unit for crude oil, natural gas and power.",
+      "a": "Crude oil: barrel (bbl). Natural gas: MWh (or MMBtu in some markets). Power: MWh."
+    },
+    {
+      "q": "What is LNG and why is it useful?",
+      "a": "LNG is natural gas cooled to a liquid, so ships can carry it where there is no pipeline."
+    },
+    {
+      "q": "Why does middle office check the unit on a trade?",
+      "a": "A wrong or missing unit gives a wrong quantity and a wrong P&L."
+    }
+  ],
+  "read_more": "Units and conventions vary by market and by company: barrels for crude, tonnes for many products, MWh for European gas and power, MMBtu for LNG and US gas. Always read the trade ticket and the contract. Carbon allowances and freight each get their own lesson later in the course.",
+  "next": "Next lesson: physical trading versus paper (financial) trading.",
+  "concepts": ["crude oil", "refined products", "natural gas", "lng", "power", "carbon", "freight", "mwh", "mmbtu", "unit check"],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 2, "why": "the barrel (bbl) was introduced there"},
+    {"lesson": 3, "why": "each product travels along the value chain"}
+  ]
+}

@@ -40,7 +40,77 @@
     1
    ],
    "words": 216
+  },
+  {
+   "number": 3,
+   "date": "2026-11-04",
+   "module": "M1 · The big picture",
+   "title": "The energy value chain: where trading sits",
+   "minutes": 12,
+   "review": false,
+   "concepts": [
+    "upstream",
+    "midstream",
+    "downstream",
+    "value chain",
+    "mark-to-market"
+   ],
+   "request_ids": [],
+   "links": [
+    2,
+    1
+   ],
+   "words": 220
+  },
+  {
+   "number": 4,
+   "date": "2026-11-04",
+   "module": "M1 · The big picture",
+   "title": "What we trade: the main energy products",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "crude oil",
+    "refined products",
+    "natural gas",
+    "lng",
+    "power",
+    "carbon",
+    "freight",
+    "mwh",
+    "mmbtu",
+    "unit check"
+   ],
+   "request_ids": [],
+   "links": [
+    2,
+    3
+   ],
+   "words": 168
+  },
+  {
+   "number": 5,
+   "date": "2026-11-04",
+   "module": "M1 · The big picture",
+   "title": "Physical vs paper trading",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "physical trade",
+    "paper trade",
+    "futures",
+    "swaps",
+    "options",
+    "hedge example"
+   ],
+   "request_ids": [],
+   "links": [
+    2,
+    4,
+    1
+   ],
+   "words": 202
   }
  ],
- "latest": 2
+ "latest": 5
 }
