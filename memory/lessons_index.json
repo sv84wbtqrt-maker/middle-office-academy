@@ -110,7 +110,29 @@
     1
    ],
    "words": 202
+  },
+  {
+   "number": 6,
+   "date": "2026-11-05",
+   "module": "M1 · The big picture",
+   "title": "A day in the life of a middle office analyst",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "daily routine",
+    "daily p&l report",
+    "position report",
+    "limit usage",
+    "escalation"
+   ],
+   "request_ids": [],
+   "links": [
+    5,
+    3,
+    1
+   ],
+   "words": 189
   }
  ],
- "latest": 5
+ "latest": 6
 }

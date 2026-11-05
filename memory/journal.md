@@ -56,3 +56,12 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Words to copy: 202.
 
 > Note (2026-11-04): the learner had done L1 and L2, so L3 to L5 were prepared at once (reserve of 2 in advance). Next: L6 (day in the life), L7 is a review.
+
+## Lesson 6 · 2026-11-05 · A day in the life of a middle office analyst
+- Module: M1 · The big picture
+- Taught: morning routine, daily P&L report, position and risk report, limit usage (illustrative), escalation.
+- Links made: (→ L5) trade checks, (→ L3) MtM prices, (→ L1) independence/P&L/limits (L4 units also reused).
+- Story: Sam's morning, 9 a.m. report deadline. Next: L7 review.
+- Planted for later: daily P&L explain (M5), risk ladder (M6), escalation process (M8).
+- Words to copy: 189.
+- Learner feedback seen: L1 to L3 right/right. No questions in the Sheet.

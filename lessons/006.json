@@ -1,0 +1,51 @@
+{
+  "number": 6,
+  "date": "2026-11-05",
+  "module": "M1 · The big picture",
+  "title": "A day in the life of a middle office analyst",
+  "minutes": 13,
+  "story": "Day six. Sam gives you a badge and a desk next to the risk team. \"Today you follow my morning. By 9 a.m. the traders must receive two reports from us. If a number is wrong, they will trade on a wrong picture.\"",
+  "objective": "I can describe the main tasks of a middle office analyst and the two daily reports.",
+  "write": [
+    {
+      "heading": "1. A typical morning",
+      "body": "1. Check that **yesterday's trades** are all in the system, with the right price, quantity and counterparty (→ L5).\n2. Check the **market prices** used to value the book (→ L3).\n3. Produce the reports. 4. Explain big moves to the traders."
+    },
+    {
+      "heading": "2. The two daily reports",
+      "body": "- **Daily P&L report**: how much the book made or lost since yesterday (→ L1).\n- **Position and risk report**: what the desk owns, in barrels or MWh (→ L4), and how close it is to its **limits** (→ L1)."
+    },
+    {
+      "heading": "3. Example (illustrative)",
+      "body": "Yesterday's book value: $10.0m. Today: $10.4m. Daily P&L = **+$0.4m**.\nPosition: 500,000 bbl. Limit: 800,000 bbl. Usage = 500 / 800 = **62%**."
+    },
+    {
+      "heading": "4. Why it matters",
+      "body": "We work independently from the traders (→ L1). If we find an error or a limit breach, we **escalate**: we tell Sam and the risk manager at once. Speed and accuracy are both needed."
+    }
+  ],
+  "check": [
+    {
+      "q": "Name the two daily reports of the middle office.",
+      "a": "The daily P&L report and the position and risk report."
+    },
+    {
+      "q": "Why do we check trades and prices before producing reports?",
+      "a": "Because a wrong trade or price gives a wrong P&L and risk, and traders would act on a wrong picture."
+    },
+    {
+      "q": "Position 600,000 bbl, limit 800,000 bbl. What is the limit usage?",
+      "a": "600 / 800 = 75%."
+    }
+  ],
+  "read_more": "Titles differ between companies: this work can be called product control, risk control or middle office. The numbers above are illustrative, not real. Timing of reports varies by desk; early morning is typical.",
+  "next": "Next lesson (L7): a review of the first six days, with a small case at Northbridge.",
+  "concepts": ["daily routine", "daily p&l report", "position report", "limit usage", "escalation"],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 5, "why": "trade checks cover physical and paper trades"},
+    {"lesson": 3, "why": "mark-to-market prices value the book"},
+    {"lesson": 1, "why": "independence, P&L and limits first appeared there"}
+  ]
+}
