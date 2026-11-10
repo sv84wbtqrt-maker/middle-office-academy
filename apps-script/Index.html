@@ -59,7 +59,9 @@ th, td { border: 1px solid var(--line); padding: 2px 8px; text-align: left; line
 .q .a { display: none; margin-top: 4px; padding: 8px 10px; background: var(--ok-bg); border-radius: 8px; font-size: 15px; line-height: 1.5; }
 .q.open .a { display: block; }
 button, .btn { font: inherit; font-size: 15px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; cursor: pointer; }
-button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+button.primary, .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+.btn { display: inline-block; text-decoration: none; }
+.big { font-size: 16px; padding: 12px 18px; width: 100%; text-align: center; }
 button.ok { background: var(--ok); color: var(--card); border-color: var(--ok); }
 button.chip { border-radius: 999px; padding: 4px 12px; font-size: 14px; }
 button.chip.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
@@ -234,6 +236,9 @@ textarea { min-height: 100px; }
       var h = '';
       h += '<div class="meta"><span>Lesson ' + l.number + '</span><span>' + esc(fmtDate(lessonDate(l))) + '</span><span>' + esc(l.module) + '</span><span>≈ ' + l.minutes + ' min of writing</span></div>';
       h += '<h1>' + esc(l.title) + (l.review ? ' <span class="badge todo">review</span>' : '') + '</h1>';
+      if (lessonStatus(l.number) === 'written' && S.cache[l.number + 1]) {
+        h += '<div class="row no-print"><a class="btn" href="#/lesson/' + (l.number + 1) + '">Next lesson (L' + (l.number + 1) + ') →</a></div>';
+      }
       h += '<div class="label">Read, don\'t copy</div><div class="story">' + md(l.story) + '</div>';
       h += '<div class="paper"><div class="label write">✍️ Copy into your workbook</div>';
       h += '<p><strong>L' + l.number + ' · ' + esc(lessonDate(l)) + ' · ' + esc(l.title) + '</strong></p>';
@@ -270,12 +275,19 @@ textarea { min-height: 100px; }
   function actions(l, latest) {
     var st = lessonStatus(l.number), fb = lessonEntry(l.number).feedback || {};
     var h = '<section class="card actions"><div class="label">Your progress</div>';
+    var next = S.cache[l.number + 1];
     if (st === 'written') {
-      h += '<div class="status ok">✓ Written. ' + (latest ? 'Your next lesson arrives tomorrow morning (the lessons prepared in advance are all done: well done!).' : '') + '</div>';
+      if (next) {
+        h += '<div class="status ok">✓ Written.</div>';
+        h += '<div class="row"><a class="btn primary big" href="#/lesson/' + next.number + '">Next lesson: L' + next.number + ' · ' + esc(next.title) + ' →</a></div>';
+      } else {
+        h += '<div class="status ok">✓ Written. Your next lesson arrives tomorrow morning (the lessons prepared in advance are all done: well done!).</div>';
+      }
       h += '<div class="row"><button data-status="not_written">Undo: I haven\'t written it</button></div>';
     } else {
-      h += '<div class="status warn">' + (latest ? 'Not written yet. When you mark it as written, ' + (S.reserve > 0 ? 'the next lesson opens immediately (' + S.reserve + ' ready in advance).' : 'the next lesson arrives the next morning.') : 'Not marked as written.') + '</div>';
-      h += '<div class="row"><button class="primary" data-status="written">✓ I have written this lesson</button></div>';
+      var canGo = latest && S.reserve > 0;
+      h += '<div class="status warn">' + (latest ? 'Not written yet. ' + (canGo ? S.reserve + ' lesson' + (S.reserve > 1 ? 's' : '') + ' ready in advance: the next one opens as soon as you click below.' : 'The next lesson arrives the next morning.') : 'Not marked as written.') + '</div>';
+      h += '<div class="row"><button class="primary big" data-status="written">' + (canGo ? '✓ I have written it · next lesson →' : '✓ I have written this lesson') + '</button></div>';
     }
     h += '<div class="row"><span class="muted">Difficulty:</span>' +
       chip('difficulty', 'too_easy', 'Too easy', fb) + chip('difficulty', 'right', 'Just right', fb) + chip('difficulty', 'too_hard', 'Too hard', fb) + '</div>';
