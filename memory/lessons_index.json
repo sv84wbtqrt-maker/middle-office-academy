@@ -201,7 +201,31 @@
     6
    ],
    "words": 198
+  },
+  {
+   "number": 10,
+   "date": "2026-11-10",
+   "module": "M2 · Markets and prices",
+   "title": "Gas hubs and LNG: TTF, NBP, Henry Hub and JKM",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "gas hub",
+    "virtual hub",
+    "ttf",
+    "nbp",
+    "henry hub",
+    "jkm",
+    "therm"
+   ],
+   "request_ids": [],
+   "links": [
+    4,
+    9,
+    2
+   ],
+   "words": 203
   }
  ],
- "latest": 9
+ "latest": 10
 }

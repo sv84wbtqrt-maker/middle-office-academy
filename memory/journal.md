@@ -90,3 +90,12 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: IOSCO principles (M8 regulation), independent price verification (M6 lesson 86), averaging periods (M3).
 - Words to copy: 198.
 - Learner feedback seen: L1 to L3, L5, L6 right/right; L4 no feedback. No questions in the Sheet.
+
+## Lesson 10 · 2026-11-10 · Gas hubs and LNG: TTF, NBP, Henry Hub and JKM
+- Module: M2 · Markets and prices
+- Taught: gas hub, virtual hub, TTF (EUR/MWh), NBP (pence/therm), Henry Hub (USD/MMBtu), JKM (LNG, Asia), unit trap, LNG arbitrage idea.
+- Links made: (→ L4) units, (→ L9) JKM assessed by Platts, (→ L2) arbitrage.
+- Story: Dana takes over with four prices on a screen. Next: L11 power markets.
+- Planted for later: TTF-Q1 position (lesson 20), forward curves (L13), unit conversions (1 MWh about 3.41 MMBtu).
+- Words to copy: about 240.
+- Learner feedback seen: L1 to L3, L5 to L7 right/right. No questions in the Sheet.

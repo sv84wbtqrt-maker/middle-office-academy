@@ -1,0 +1,68 @@
+{
+  "number": 10,
+  "date": "2026-11-10",
+  "module": "M2 · Markets and prices",
+  "title": "Gas hubs and LNG: TTF, NBP, Henry Hub and JKM",
+  "minutes": 11,
+  "story": "Dana, the gas and power trader, waves you over to a screen with four prices in four colours. *\"Oil has Brent. Gas has no single world price. It has hubs, and each hub has its own price and its own unit. Learn the four on this screen, and you will never mix them up in a report.\"*",
+  "objective": "I can name the four main gas and LNG price references, say where each one applies and give its usual unit.",
+  "write": [
+    {
+      "heading": "1. What is a gas hub?",
+      "body": "A **hub** is a trading point on a gas network where gas changes owner. Gas is hard to ship, so prices differ by region. Gas is quoted in energy units (→ L4)."
+    },
+    {
+      "heading": "2. The four references",
+      "body": "| Name | Where | Usual unit |\n|---|---|---|\n| **TTF** | Netherlands, the European reference | EUR/MWh |\n| **NBP** | United Kingdom | pence/therm |\n| **Henry Hub** | Louisiana, USA | USD/MMBtu |\n| **JKM** | Japan and Korea, LNG | USD/MMBtu |"
+    },
+    {
+      "heading": "3. How they work",
+      "body": "- TTF and NBP are **virtual hubs**: gas is traded inside a network, not at one place. TTF futures trade on an exchange.\n- **JKM** is a price for LNG cargoes delivered in Asia, assessed by a PRA, Platts (→ L9).\n- Unit trap: never compare EUR/MWh and USD/MMBtu without converting. Always do the unit check (→ L4)."
+    },
+    {
+      "heading": "4. Why gaps between hubs matter",
+      "body": "If US gas is cheap and Asian gas is dear, a trader can ship LNG to profit from the gap (arbitrage, → L2), after paying shipping costs."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is a gas hub?",
+      "a": "A trading point on a gas network where gas changes owner. Each hub has its own price."
+    },
+    {
+      "q": "Match each reference with its region: TTF, NBP, Henry Hub, JKM.",
+      "a": "TTF: Netherlands (Europe). NBP: United Kingdom. Henry Hub: Louisiana, USA. JKM: Japan and Korea (LNG in Asia)."
+    },
+    {
+      "q": "Why must you check units before comparing TTF and Henry Hub?",
+      "a": "TTF is in EUR/MWh and Henry Hub in USD/MMBtu: different currency and different energy unit, so you must convert first."
+    }
+  ],
+  "read_more": "TTF became the main European gas benchmark in the 2010s as the Dutch hub gained liquidity, and its futures trade on ICE Endex. Henry Hub is the delivery point of the NYMEX natural gas futures contract (CME Group). JKM stands for Japan Korea Marker and is published by Platts. In 2022, European gas prices rose very sharply, which is why TTF is closely followed by every gas desk. A quick rule often used: 1 MWh is about 3.41 MMBtu.",
+  "next": "Next lesson (L11): power markets, day-ahead and intraday, baseload and peakload.",
+  "concepts": [
+    "gas hub",
+    "virtual hub",
+    "ttf",
+    "nbp",
+    "henry hub",
+    "jkm",
+    "therm"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 4,
+      "why": "units MWh and MMBtu, unit check"
+    },
+    {
+      "lesson": 9,
+      "why": "JKM is assessed by a PRA"
+    },
+    {
+      "lesson": 2,
+      "why": "arbitrage between places"
+    }
+  ]
+}
