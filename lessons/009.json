@@ -1,0 +1,68 @@
+{
+  "number": 9,
+  "date": "2026-11-10",
+  "module": "M2 · Markets and prices",
+  "title": "Price reporting agencies: Platts and Argus",
+  "minutes": 13,
+  "story": "Sam opens a long list of prices on the screen: *\"Brent, diesel, jet fuel, LNG... Who decides these numbers? Not us, not the exchanges. Two private companies publish most of them, and half of our contracts depend on what they publish tonight.\"*",
+  "objective": "I can explain what a price reporting agency does and why middle office uses its prices.",
+  "write": [
+    {
+      "heading": "1. What is a PRA?",
+      "body": "A **price reporting agency (PRA)** is an independent company that publishes daily **price assessments** for physical energy products. The two main ones are **Platts** (S&P Global) and **Argus**."
+    },
+    {
+      "heading": "2. How a price is assessed",
+      "body": "Many physical products are not traded on an exchange. So the PRA collects **bids**, **offers** and **deals** from traders, often during a short window at the end of the day, and publishes one price per product and per day. Example: Dated Brent (→ L8)."
+    },
+    {
+      "heading": "3. Why it matters",
+      "body": "- Physical contracts are often priced on an **average** of PRA assessments (example: the average of 5 days around the loading date).\n- Middle office uses end-of-day prices to value positions (**mark-to-market**, → L3) and checks them every morning (→ L6)."
+    },
+    {
+      "heading": "4. Key words",
+      "body": "- **Bid**: price a buyer offers to pay.\n- **Offer** (or ask): price a seller asks.\n- **Assessment**: the price published by a PRA for one day."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is a price reporting agency? Name two.",
+      "a": "An independent company that publishes daily price assessments for physical energy products. Platts (S&P Global) and Argus."
+    },
+    {
+      "q": "Why can't we simply take the price from an exchange for many physical products?",
+      "a": "Because many physical products (cargoes, specific grades and places) are not traded on an exchange: they are traded over the counter, so a PRA must assess the price."
+    },
+    {
+      "q": "Give two uses of PRA prices in a trading company.",
+      "a": "Pricing physical contracts (often on an average of assessments) and valuing positions at end of day (mark-to-market), which middle office checks."
+    }
+  ],
+  "read_more": "For North Sea crude, the Platts assessment process (often called the \"window\" or market-on-close) takes place in the late London afternoon. Because so much money depends on these numbers, PRAs are supervised under principles set by IOSCO (the international body of securities regulators), and trading companies have strict rules on how traders report deals to them. Middle office does not publish prices, but it must know which source and which date each contract uses.",
+  "next": "Next lesson (L10): gas hubs and their prices, TTF, NBP, Henry Hub, and the LNG reference JKM. Dana takes over.",
+  "concepts": [
+    "price reporting agency",
+    "platts",
+    "argus",
+    "price assessment",
+    "bid",
+    "offer",
+    "average pricing"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 8,
+      "why": "Dated Brent is a PRA assessment"
+    },
+    {
+      "lesson": 3,
+      "why": "mark-to-market uses end-of-day prices"
+    },
+    {
+      "lesson": 6,
+      "why": "morning price checks"
+    }
+  ]
+}

@@ -35,7 +35,8 @@ previous day and publishes lesson 1 on the first run.
 The learner can do several lessons a day: the web page shows every lesson up to the first one not
 marked written, and keeps the next ones hidden. As soon as they mark the current lesson as written,
 the next one opens immediately. Your job each morning is to keep **2 lessons ready in advance**.
-- W = the number of lessons marked written in a row from L1 (snapshot). N = `latest` in
+- W = the highest lesson number marked written in the snapshot (even if an earlier one is not
+  ticked: a lesson ticked late must never stop the reserve). N = `latest` in
   `memory/lessons_index.json`. Target = W + 3 (the current lesson + 2 in advance).
 - If N >= Target: **no new lesson**. Commit only `memory/progress_snapshot.json` if it changed. End
   with: "Reserve full: lessons up to L<N> are ready."

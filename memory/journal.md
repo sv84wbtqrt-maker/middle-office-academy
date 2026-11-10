@@ -65,3 +65,28 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: daily P&L explain (M5), risk ladder (M6), escalation process (M8).
 - Words to copy: 189.
 - Learner feedback seen: L1 to L3 right/right. No questions in the Sheet.
+
+> Note (2026-11-10): the reserve was empty for several days because L4 was ticked late (after L5 and L6) and the reserve was counted on lessons written "in a row". Rule changed in both courses: the reserve is now counted from the highest lesson marked written, and the page shows every lesson up to that + 1. L7 to L9 written in a chat session at the learner's request.
+
+## Lesson 7 · 2026-11-10 · Review: your first week at Northbridge
+- Module: M1 · The big picture (review)
+- Recap of L1 to L6 in six lines, one end-to-end trade story (physical cargo + futures hedge + middle office check), draw: value chain over the three offices.
+- Links made: (→ L1) to (→ L6).
+- Words to copy: 202.
+
+## Lesson 8 · 2026-11-10 · Oil benchmarks: Brent, WTI and Dubai
+- Module: M2 · Markets and prices (start)
+- Taught: benchmark, benchmark ± differential, Brent / WTI (Cushing) / Dubai-Oman, light/heavy, sweet/sour.
+- Links made: (→ L4) products and units, (→ L5) pricing formula of physical trades.
+- Facts used: Dated Brent basket includes WTI Midland since 2023; WTI futures on NYMEX, Brent on ICE; "about two-thirds" given as commonly said.
+- Planted for later: futures (M3), pricing formulas and averaging (M3 lesson 26).
+- Words to copy: 193.
+
+## Lesson 9 · 2026-11-10 · Price reporting agencies: Platts and Argus
+- Module: M2 · Markets and prices
+- Taught: PRA, price assessment, bid / offer, end-of-day window, average pricing, use for MtM.
+- Links made: (→ L8) Dated Brent, (→ L3) mark-to-market, (→ L6) morning checks.
+- Story: Dana announced for L10 (gas hubs).
+- Planted for later: IOSCO principles (M8 regulation), independent price verification (M6 lesson 86), averaging periods (M3).
+- Words to copy: 198.
+- Learner feedback seen: L1 to L3, L5, L6 right/right; L4 no feedback. No questions in the Sheet.

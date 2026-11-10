@@ -195,11 +195,10 @@ textarea { min-height: 100px; }
     S.progress = { lessons: d.progress || {}, requests: d.requests || [] };
     // Lessons prepared in advance stay hidden: visible = all lessons up to the first one not written yet.
     var all = d.lessons.slice().sort(function (a, b) { return a.number - b.number; });
-    var visible = [];
-    for (var i = 0; i < all.length; i++) {
-      visible.push(all[i]);
-      if (lessonStatus(all[i].number) !== 'written') break;
-    }
+    // Visible = every lesson up to (highest lesson written + 1): a lesson ticked late never blocks the next ones.
+    var maxWritten = 0;
+    all.forEach(function (l) { if (lessonStatus(l.number) === 'written') maxWritten = Math.max(maxWritten, l.number); });
+    var visible = all.filter(function (l) { return l.number <= maxWritten + 1; });
     S.reserve = all.length - visible.length;
     S.index = { lessons: visible, latest: visible.length ? visible[visible.length - 1].number : 0 };
     S.cache = {};

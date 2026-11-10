@@ -1,11 +1,12 @@
 {
- "current_module": "M1",
+ "current_module": "M2",
  "handled_requests": [],
  "scheduled_requests": [],
  "story_objects": {
   "Cargo NS-01": "not introduced yet (planned lesson 20)",
   "TTF-Q1": "not introduced yet (planned lesson 20)",
-  "600,000 bbl cargo": "used as an illustrative hedge example in L5; becomes Cargo NS-01 in lesson 20"
+  "600,000 bbl cargo": "used as an illustrative hedge example in L5; becomes Cargo NS-01 in lesson 20",
+  "Dana": "gas and power trader, takes the lead in L10 (gas hubs)"
  },
- "pace_notes": "L1-L3 rated right/right. Keep 190 to 270 words to copy. L6 is 189 words: L7 is a review, can be about 240."
+ "pace_notes": "All lessons rated right/right so far. Keep 190 to 260 words to copy."
 }

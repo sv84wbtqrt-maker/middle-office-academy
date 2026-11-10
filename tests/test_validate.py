@@ -47,6 +47,11 @@ class ValidatorTest(unittest.TestCase):
         ok = {"lessons": {"1": {"status": "written"}}, "requests": []}
         self.assertEqual(self.run_case(ls, ok), 0)
 
+    def test_lesson_ticked_late_does_not_block(self):
+        ls = [self.lesson(i, "2026-11-02") for i in range(1, 7)]
+        prog = {"lessons": {"1": {"status": "written"}, "3": {"status": "written"}}, "requests": []}
+        self.assertEqual(self.run_case(ls, prog), 0)        # L2 not ticked, but L3 is: up to L6 allowed
+
     def test_too_long_lesson_rejected(self):
         l = self.lesson(1, "2026-11-02")
         l["write"].append({"heading": "Extra", "body": "word " * 200})

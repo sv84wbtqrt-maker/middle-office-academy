@@ -112,12 +112,11 @@ def main(argv=None):
 
     progress = load_json(a.progress, {}) or {}
     status = progress.get("lessons", {})
-    written = 0  # all lessons 1..written are marked written
-    while status.get(str(written + 1), {}).get("status") == "written":
-        written += 1
+    # Highest lesson marked written (a lesson ticked late must not block the reserve).
+    written = max([int(k) for k, v in status.items() if str(k).isdigit() and v.get("status") == "written"] or [0])
     max_allowed = written + 1 + AHEAD
     if nums and nums[-1] > max_allowed:
-        errors.append("lesson %d is too far ahead: lessons 1..%d are written, so the last lesson allowed is %d "
+        errors.append("lesson %d is too far ahead: the highest lesson written is %d, so the last lesson allowed is %d "
                       "(the current one + %d in advance)" % (nums[-1], written, max_allowed, AHEAD))
     request_ids = {r.get("id") for r in progress.get("requests", [])}
     for _, l in lessons:

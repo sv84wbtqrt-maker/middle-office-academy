@@ -1,0 +1,64 @@
+{
+  "number": 8,
+  "date": "2026-11-10",
+  "module": "M2 · Markets and prices",
+  "title": "Oil benchmarks: Brent, WTI and Dubai",
+  "minutes": 14,
+  "story": "Monday, week two. Chris points at three numbers at the top of every screen on the floor. *\"Brent, WTI, Dubai. Thousands of crudes exist, but almost all of them are priced against one of these three. If you know them, you can read any oil contract.\"*",
+  "objective": "I can name the three oil benchmarks, say where they come from, and explain how another crude is priced against them.",
+  "write": [
+    {
+      "heading": "1. What is a benchmark?",
+      "body": "A **benchmark** is a reference crude whose price is published every day. Other crudes are priced as: **benchmark ± differential**. Example (illustrative): a West African crude sold at \"Dated Brent + $1.50/bbl\"."
+    },
+    {
+      "heading": "2. The three benchmarks",
+      "body": "| Benchmark | Origin | Main use |\n|---|---|---|\n| **Brent** | North Sea (Europe) | world reference, Europe, Africa |\n| **WTI** | USA (Cushing, Oklahoma) | American crudes |\n| **Dubai / Oman** | Middle East | crude sold to Asia |"
+    },
+    {
+      "heading": "3. Quality: why prices differ",
+      "body": "- **Light** crude (low density) gives more petrol and diesel: worth more.\n- **Sweet** crude (low sulphur) is cheaper to refine: worth more.\nBrent and WTI are light and sweet; Dubai is heavier and **sour** (more sulphur). That is why a quality differential exists (→ L4)."
+    },
+    {
+      "heading": "4. For middle office",
+      "body": "Every physical trade (→ L5) has a pricing formula: check the benchmark, the differential and the unit (bbl) before valuing it."
+    }
+  ],
+  "check": [
+    {
+      "q": "Name the three oil benchmarks and their origin.",
+      "a": "Brent (North Sea), WTI (USA, delivered at Cushing, Oklahoma), Dubai/Oman (Middle East)."
+    },
+    {
+      "q": "A crude is sold at \"Brent − $2\". Brent is $78. What is its price?",
+      "a": "78 − 2 = $76 per barrel."
+    },
+    {
+      "q": "Why is a light sweet crude worth more than a heavy sour one?",
+      "a": "It gives more high-value products (petrol, diesel) and needs less processing to remove sulphur."
+    }
+  ],
+  "read_more": "Brent is often described as the price reference for a large share (commonly said about two-thirds) of the world's internationally traded crude. Today \"Dated Brent\" is not one single field: the assessment uses a basket of North Sea grades, and since 2023 it also includes WTI Midland crude shipped from the US to Europe. WTI futures trade on NYMEX (CME group) and Brent futures on ICE. You will meet futures in detail in module 3.",
+  "next": "Next lesson (L9): who publishes these prices every day? The price reporting agencies, Platts and Argus.",
+  "concepts": [
+    "benchmark",
+    "brent",
+    "wti",
+    "dubai/oman",
+    "differential",
+    "light / heavy crude",
+    "sweet / sour crude"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 4,
+      "why": "products and barrel unit"
+    },
+    {
+      "lesson": 5,
+      "why": "physical trades have a pricing formula"
+    }
+  ]
+}

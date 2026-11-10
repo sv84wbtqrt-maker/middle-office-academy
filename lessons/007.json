@@ -1,0 +1,75 @@
+{
+  "number": 7,
+  "date": "2026-11-10",
+  "module": "M1 · The big picture",
+  "title": "Review: your first week at Northbridge",
+  "minutes": 13,
+  "story": "Friday evening at Northbridge. Sam sits down with you and a coffee: *\"One week done. Before we open the markets next week, close your eyes and tell me the whole story of a trade, from the oil field to my 9 a.m. report.\"*",
+  "objective": "I can connect the six first lessons in one story, from the oil field to the middle office report.",
+  "write": [
+    {
+      "heading": "1. The week in six lines",
+      "body": "- **L1**: front, middle, back office; segregation of duties (→ L1).\n- **L2**: four reasons to trade; arbitrage; book (→ L2).\n- **L3**: upstream, midstream, downstream (→ L3).\n- **L4**: products and units: bbl, tonne, MWh, MMBtu (→ L4).\n- **L5**: physical vs paper trades; a hedge (→ L5).\n- **L6**: the daily P&L and risk reports at 9 a.m. (→ L6)."
+    },
+    {
+      "heading": "2. One story, start to end",
+      "body": "Chris buys a crude cargo from an upstream producer (physical trade) and sells futures to fix the price (paper trade, hedge). The back office organises the ship. Next morning, middle office checks both trades, values them at market prices and explains the P&L before 9 a.m."
+    },
+    {
+      "heading": "3. Draw",
+      "body": "Three boxes in a row (upstream, midstream, downstream) and, under them, the three offices: who **decides**, who **checks**, who **delivers**."
+    }
+  ],
+  "check": [
+    {
+      "q": "Why must the person who checks a trade be independent from the trader?",
+      "a": "Segregation of duties (L1): otherwise a trader could hide losses or exceed limits without anyone seeing it."
+    },
+    {
+      "q": "In the story above, which trade is physical and which is paper? Why does Chris do both?",
+      "a": "The cargo is physical (real oil delivered); the futures are paper (financial, no delivery). Chris sells futures to hedge: if the oil price falls, the gain on the futures offsets the loss on the cargo (L5)."
+    },
+    {
+      "q": "Give the usual unit for crude oil, power and gas in the US.",
+      "a": "Crude oil: barrel (bbl). Power: MWh. US gas: MMBtu (L4)."
+    },
+    {
+      "q": "What two reports does middle office send by 9 a.m.?",
+      "a": "The daily P&L report and the position and risk report (with limit usage) (L6)."
+    }
+  ],
+  "read_more": "Tip: open your workbook at L1 and flip through the six pages while you copy this review: the (→ L<n>) marks are there to make you go back. A review costs no new words, but it is what turns six separate pages into knowledge you can use in an interview.",
+  "next": "Next lesson (L8): we open the markets with the three oil benchmarks, Brent, WTI and Dubai.",
+  "concepts": [
+    "review m1",
+    "trade story end to end"
+  ],
+  "review": true,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 1,
+      "why": "segregation of duties"
+    },
+    {
+      "lesson": 2,
+      "why": "reasons to trade, book"
+    },
+    {
+      "lesson": 3,
+      "why": "value chain"
+    },
+    {
+      "lesson": 4,
+      "why": "products and units"
+    },
+    {
+      "lesson": 5,
+      "why": "physical vs paper, hedge"
+    },
+    {
+      "lesson": 6,
+      "why": "daily reports"
+    }
+  ]
+}

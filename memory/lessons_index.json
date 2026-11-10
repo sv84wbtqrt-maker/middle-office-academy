@@ -132,7 +132,76 @@
     1
    ],
    "words": 189
+  },
+  {
+   "number": 7,
+   "date": "2026-11-10",
+   "module": "M1 · The big picture",
+   "title": "Review: your first week at Northbridge",
+   "minutes": 13,
+   "review": true,
+   "concepts": [
+    "review m1",
+    "trade story end to end"
+   ],
+   "request_ids": [],
+   "links": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "words": 202
+  },
+  {
+   "number": 8,
+   "date": "2026-11-10",
+   "module": "M2 · Markets and prices",
+   "title": "Oil benchmarks: Brent, WTI and Dubai",
+   "minutes": 14,
+   "review": false,
+   "concepts": [
+    "benchmark",
+    "brent",
+    "wti",
+    "dubai/oman",
+    "differential",
+    "light / heavy crude",
+    "sweet / sour crude"
+   ],
+   "request_ids": [],
+   "links": [
+    4,
+    5
+   ],
+   "words": 193
+  },
+  {
+   "number": 9,
+   "date": "2026-11-10",
+   "module": "M2 · Markets and prices",
+   "title": "Price reporting agencies: Platts and Argus",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "price reporting agency",
+    "platts",
+    "argus",
+    "price assessment",
+    "bid",
+    "offer",
+    "average pricing"
+   ],
+   "request_ids": [],
+   "links": [
+    8,
+    3,
+    6
+   ],
+   "words": 198
   }
  ],
- "latest": 6
+ "latest": 9
 }
