@@ -225,7 +225,30 @@
     2
    ],
    "words": 203
+  },
+  {
+   "number": 11,
+   "date": "2026-11-11",
+   "module": "M2 · Markets and prices",
+   "title": "Power markets: day-ahead, intraday, baseload and peakload",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "power storage problem",
+    "day-ahead market",
+    "intraday market",
+    "baseload",
+    "peakload",
+    "mw vs mwh"
+   ],
+   "request_ids": [],
+   "links": [
+    10,
+    4,
+    3
+   ],
+   "words": 250
   }
  ],
- "latest": 10
+ "latest": 11
 }

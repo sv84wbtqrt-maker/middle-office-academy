@@ -1,0 +1,58 @@
+{
+  "number": 11,
+  "date": "2026-11-11",
+  "module": "M2 · Markets and prices",
+  "title": "Power markets: day-ahead, intraday, baseload and peakload",
+  "minutes": 13,
+  "story": "Dana switches the screen from gas to a chart full of small bars, one for each part of tomorrow. *\"Gas can wait in a pipe or a tank. Power cannot wait: what is produced must be used in the same second. That is why power has many prices for one single day, and why you must always ask: which hours?\"*",
+  "objective": "I can explain why power is traded for each period of the day, and the difference between day-ahead, intraday, baseload and peakload.",
+  "write": [
+    {
+      "heading": "1. Why power is special",
+      "body": "Power is hard to **store** in large amounts. Supply must equal demand at every moment, or the grid fails. So the price can change a lot from one hour to the next. Power is quoted in EUR/MWh, like TTF gas (→ L10), but one MWh delivered at 8 p.m. is not the same product as one MWh at 3 a.m."
+    },
+    {
+      "heading": "2. Day-ahead and intraday",
+      "body": "- **Day-ahead market**: an auction around midday sets a price for each period of tomorrow. In Europe the periods are now 15 minutes.\n- **Intraday market**: trading continues until shortly before delivery, to fix last changes (a plant stops, the wind drops)."
+    },
+    {
+      "heading": "3. Baseload and peakload",
+      "body": "- **Baseload**: the same power every hour of the day, 24 hours.\n- **Peakload**: power only in busy hours, typically 8 a.m. to 8 p.m. on weekdays.\nExample (illustrative): baseload 90 EUR/MWh, peakload 110 EUR/MWh. Peak is usually dearer because demand is higher."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Volume = MW × hours. Example: 10 MW baseload for one day = 10 × 24 = 240 MWh. Peak hours are fewer, so always check the hours before the volume (→ L4). Power plants sit in the middle of the value chain (→ L3)."
+    }
+  ],
+  "check": [
+    {
+      "q": "Why can the power price change so much from hour to hour?",
+      "a": "Power is hard to store, so supply must equal demand at every moment. Each hour (or quarter-hour) has its own balance and its own price."
+    },
+    {
+      "q": "What is the difference between baseload and peakload?",
+      "a": "Baseload is the same power every hour, 24 hours a day. Peakload is power only in busy hours, typically 8 a.m. to 8 p.m. on weekdays."
+    },
+    {
+      "q": "A trade is 5 MW baseload for one day. What volume in MWh?",
+      "a": "5 MW × 24 hours = 120 MWh."
+    }
+  ],
+  "read_more": "In Europe, the day-ahead power markets of most countries are coupled in one daily auction (Single Day-Ahead Coupling, SDAC), run by power exchanges such as EPEX SPOT and Nord Pool. Since delivery day 1 October 2025, this auction prices 15-minute periods instead of hours. Exact peak hours depend on the market and the contract, so middle office always reads the product definition. Sources: EPEX SPOT news, 'Successful implementation of 15-minute MTU in SDAC' (October 2025).",
+  "next": "Next lesson (L12): carbon, the EU Emissions Trading System and EUAs.",
+  "concepts": [
+    "power storage problem",
+    "day-ahead market",
+    "intraday market",
+    "baseload",
+    "peakload",
+    "mw vs mwh"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 10, "why": "EUR/MWh, same unit as TTF gas"},
+    {"lesson": 4, "why": "units and unit check (MW vs MWh)"},
+    {"lesson": 3, "why": "power plants in the value chain"}
+  ]
+}

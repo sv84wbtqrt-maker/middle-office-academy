@@ -99,3 +99,13 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: TTF-Q1 position (lesson 20), forward curves (L13), unit conversions (1 MWh about 3.41 MMBtu).
 - Words to copy: about 240.
 - Learner feedback seen: L1 to L3, L5 to L7 right/right. No questions in the Sheet.
+
+## Lesson 11 · 2026-11-11 · Power markets: day-ahead, intraday, baseload and peakload
+- Module: M2 · Markets and prices
+- Taught: why power is special (storage, real-time balance), day-ahead auction (15-minute periods in Europe since 1 Oct 2025), intraday, baseload vs peakload (typically 8 a.m.-8 p.m. weekdays), volume = MW × hours.
+- Links made: (→ L10) EUR/MWh like TTF, (→ L4) unit check, (→ L3) value chain (older lesson brought back).
+- Story: Dana's chart of tomorrow's power prices. Next: L12 carbon (EU ETS, EUAs).
+- Facts used: SDAC 15-minute MTU go-live for delivery day 1 Oct 2025 (EPEX SPOT / NEMO announcements, verified by web search). Auction time written as "around midday" only.
+- Planted for later: spark and dark spreads (L17), power spread story object, shaping/profiles (M6 risk).
+- Words to copy: 250.
+- Learner feedback seen: L1 to L3, L5 to L8 right/right; L4 no feedback. W = 8, target = 11, so one lesson prepared. No questions in the Sheet.
