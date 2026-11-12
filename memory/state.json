@@ -6,7 +6,8 @@
   "Cargo NS-01": "not introduced yet (planned lesson 20)",
   "TTF-Q1": "not introduced yet (planned lesson 20)",
   "600,000 bbl cargo": "used as an illustrative hedge example in L5; becomes Cargo NS-01 in lesson 20",
-  "Dana": "gas and power trader, leads L10 (gas hubs) and L11 (power markets)"
+  "Dana": "gas and power trader, leads L10 (gas hubs), L11 (power markets) and L12 (carbon)",
+  "Forward curves": "introduced in L13 (TTF curve example); shapes (contango/backwardation) in L15"
  },
- "pace_notes": "All rated lessons right/right (L1-L3, L5-L8). Keep 190 to 260 words to copy."
+ "pace_notes": "All rated lessons right/right (L1-L3, L5-L10). Keep 190 to 260 words to copy."
 }

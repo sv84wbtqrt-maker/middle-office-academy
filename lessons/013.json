@@ -1,0 +1,66 @@
+{
+  "number": 13,
+  "date": "2026-11-12",
+  "module": "M2 · Markets and prices",
+  "title": "Forward curves: one price for each delivery date",
+  "minutes": 12,
+  "story": "Sam opens the morning report and shows you a line, not a number. *\"Until now you learned one price per product. But Dana's gas for next winter and Chris's oil for March do not have today's price. Each delivery month has its own price. Put them in a row, and you get a forward curve. Half of our job uses it.\"*",
+  "objective": "I can explain what a forward curve is, read one, and say why middle office needs it every day.",
+  "write": [
+    {
+      "heading": "1. What is a forward curve?",
+      "body": "A **forward price** is the price agreed today for delivery at a future date. A **forward curve** shows the forward price for each delivery period: next month, the month after, next quarter, next year. Each period is called a **tenor**. Each product and hub has its own curve: Brent, TTF (→ L10), power, EUAs (→ L12)."
+    },
+    {
+      "heading": "2. Example: a TTF curve",
+      "body": "Example (illustrative, EUR/MWh):\n| Tenor | Price |\n|---|---|\n| Dec | 32 |\n| Jan | 34 |\n| Q2 (Apr-Jun) | 28 |\n| Next summer | 27 |\nWinter is dearer than summer because Europe uses more gas for heating."
+    },
+    {
+      "heading": "3. Why middle office needs it",
+      "body": "An open trade for March is valued with the **March price** of the curve, not with today's spot price. This is mark-to-market (→ L3). If the curve moves, the value of the trade moves, and so does the P&L."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Every evening, curves are updated with closing prices from exchanges and price agencies. Check: is every tenor updated? Is the shape normal? A flat line or a sudden jump is often a data error, not a market move."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is a forward curve?",
+      "a": "A line showing the price agreed today for delivery at each future period (tenor): next month, next quarter, next year."
+    },
+    {
+      "q": "A trade delivers gas in January. Which price do you use to value it today?",
+      "a": "The January price on today's TTF forward curve, not today's spot price."
+    },
+    {
+      "q": "Why can a sudden jump in one tenor of the curve be a warning sign?",
+      "a": "It is often a data error (a wrong or missing price), so middle office checks it before using the curve for P&L."
+    }
+  ],
+  "read_more": "Forward curves are built each day from exchange settlement prices (for example ICE and EEX futures), broker quotes and price agency assessments. Far tenors trade less, so their prices are often less reliable: this is why risk teams later check curves independently (independent price verification, a topic of module 6). The TTF numbers in this lesson are illustrative only. The shape of a curve has names, contango and backwardation, which come in lesson 15.",
+  "next": "Next lesson (L14): review of your second week, from Brent to forward curves.",
+  "concepts": [
+    "forward price",
+    "forward curve",
+    "tenor",
+    "seasonality of gas",
+    "curve check"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 12,
+      "why": "EUAs also have a forward curve"
+    },
+    {
+      "lesson": 10,
+      "why": "TTF curve example"
+    },
+    {
+      "lesson": 3,
+      "why": "mark-to-market uses the curve"
+    }
+  ]
+}

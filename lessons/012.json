@@ -1,0 +1,66 @@
+{
+  "number": 12,
+  "date": "2026-11-12",
+  "module": "M2 · Markets and prices",
+  "title": "Carbon: the EU Emissions Trading System and EUAs",
+  "minutes": 13,
+  "story": "Dana points at a fifth price on the screen, next to TTF and German power. *\"This one is not energy, but it moves with energy every day. A gas or coal power plant in Europe must pay for its CO2. So when I trade power, I always look at carbon too.\"* Sam adds: *\"And carbon has its own deadlines. Miss one, and the fine is real.\"*",
+  "objective": "I can explain how the EU ETS works, what an EUA is and why power traders watch the carbon price.",
+  "write": [
+    {
+      "heading": "1. Cap and trade",
+      "body": "The **EU ETS** (Emissions Trading System) puts a **cap** (a maximum) on the CO2 that power plants, factories, airlines and ships can emit in Europe. The cap goes down every year. Companies that emit less can sell their spare allowances. Companies that emit more must buy. This is **cap and trade**."
+    },
+    {
+      "heading": "2. The EUA",
+      "body": "One **EUA** (EU Allowance) = the right to emit **one tonne of CO2** (or equivalent). Price unit: **EUR per tonne**. Carbon was already on our list of products (→ L4). EUAs trade spot and as futures on exchanges, so they are also paper trades (→ L5)."
+    },
+    {
+      "heading": "3. The yearly deadline",
+      "body": "Each year, a company must give back (**surrender**) one EUA for each tonne it emitted the year before, by **30 September**. If it has too few, it pays a fine and must still deliver the missing EUAs."
+    },
+    {
+      "heading": "4. Why power traders care",
+      "body": "A gas power plant pays for gas and for carbon (→ L11). Example (illustrative): a plant emits 0.4 t of CO2 per MWh, the EUA costs 70 EUR/t. Carbon cost = 0.4 × 70 = **28 EUR per MWh**. When the EUA rises, power usually rises too."
+    }
+  ],
+  "check": [
+    {
+      "q": "What does one EUA allow a company to do?",
+      "a": "To emit one tonne of CO2 (or equivalent) under the EU ETS."
+    },
+    {
+      "q": "What does 'cap and trade' mean?",
+      "a": "A maximum (cap) is set on total emissions and goes down each year. Companies with spare allowances sell them, companies short of allowances buy them."
+    },
+    {
+      "q": "A plant emits 0.5 t CO2 per MWh and the EUA costs 80 EUR/t (example). What is the carbon cost per MWh?",
+      "a": "0.5 × 80 = 40 EUR per MWh."
+    }
+  ],
+  "read_more": "The EU ETS started in 2005 and is the largest carbon market in the world. It covers power and heat generation, energy-intensive industry, aviation inside Europe and, since 2024, maritime transport (phased in: shipping companies surrender allowances for 40% of their 2024 emissions, 70% for 2025, 100% from 2026). Since 2024, the surrender deadline is 30 September (it was 30 April before). Most EUA trading happens in futures, mainly December contracts on ICE Endex; EEX runs most of the auctions where governments sell new allowances. The emission factor of 0.4 t/MWh in the lesson is illustrative: real values depend on the plant. Sources: European Commission, climate.ec.europa.eu (EU ETS pages, 'Changes to the existing ETS and MRV applying from 1 January 2024').",
+  "next": "Next lesson (L13): forward curves, the price of delivery at each future date.",
+  "concepts": [
+    "eu ets",
+    "cap and trade",
+    "eua",
+    "surrender deadline",
+    "carbon cost per mwh"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 11,
+      "why": "power plants and EUR/MWh: carbon is part of the power cost"
+    },
+    {
+      "lesson": 5,
+      "why": "EUA futures are paper trades"
+    },
+    {
+      "lesson": 4,
+      "why": "carbon was on the list of traded products"
+    }
+  ]
+}

@@ -109,3 +109,21 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: spark and dark spreads (L17), power spread story object, shaping/profiles (M6 risk).
 - Words to copy: 250.
 - Learner feedback seen: L1 to L3, L5 to L8 right/right; L4 no feedback. W = 8, target = 11, so one lesson prepared. No questions in the Sheet.
+
+## Lesson 12 · 2026-11-12 · Carbon: the EU Emissions Trading System and EUAs
+- Module: M2 · Markets and prices
+- Taught: EU ETS, cap and trade, EUA = 1 t CO2 (EUR/t), yearly surrender by 30 September, carbon cost per MWh of a gas plant (illustrative 0.4 t/MWh × 70 EUR/t = 28 EUR/MWh).
+- Links made: (→ L11) power plants and EUR/MWh, (→ L5) EUA futures as paper trades, (→ L4) carbon in the product list (older lesson).
+- Story: Dana's fifth price on the screen; Sam on carbon deadlines.
+- Facts used: 30 September surrender deadline since 2024 (was 30 April); maritime phase-in 40% / 70% / 100% (regulator guides, verified by web search). Fine amount not given in the text to copy.
+- Planted for later: spark and dark spreads with carbon (L17), carbon as a separate story object later, EU ETS regulation (M8).
+- Words to copy: 247.
+
+## Lesson 13 · 2026-11-12 · Forward curves: one price for each delivery date
+- Module: M2 · Markets and prices
+- Taught: forward price, forward curve, tenor, illustrative TTF curve (winter dearer than summer), valuing an open trade with the curve's tenor price, evening curve checks (missing tenor, flat line, jump).
+- Links made: (→ L12) EUA curve, (→ L10) TTF, (→ L3) mark-to-market (older lesson).
+- Story: Sam shows a line, not a number, in the morning report. Next: L14 review of L8 to L13.
+- Planted for later: contango/backwardation (L15), IPV (M6 lesson 86), curve building (M6 lesson 85), TTF-Q1 valued on the curve (lesson 20).
+- Words to copy: 232.
+- Learner feedback seen: L1 to L3, L5 to L10 right/right; L4 no feedback. W = 10, target = 13, so L12 and L13 prepared. No questions in the Sheet.

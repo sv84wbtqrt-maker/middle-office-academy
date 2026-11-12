@@ -248,7 +248,51 @@
     3
    ],
    "words": 250
+  },
+  {
+   "number": 12,
+   "date": "2026-11-12",
+   "module": "M2 · Markets and prices",
+   "title": "Carbon: the EU Emissions Trading System and EUAs",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "eu ets",
+    "cap and trade",
+    "eua",
+    "surrender deadline",
+    "carbon cost per mwh"
+   ],
+   "request_ids": [],
+   "links": [
+    11,
+    5,
+    4
+   ],
+   "words": 247
+  },
+  {
+   "number": 13,
+   "date": "2026-11-12",
+   "module": "M2 · Markets and prices",
+   "title": "Forward curves: one price for each delivery date",
+   "minutes": 12,
+   "review": false,
+   "concepts": [
+    "forward price",
+    "forward curve",
+    "tenor",
+    "seasonality of gas",
+    "curve check"
+   ],
+   "request_ids": [],
+   "links": [
+    12,
+    10,
+    3
+   ],
+   "words": 232
   }
  ],
- "latest": 11
+ "latest": 13
 }
