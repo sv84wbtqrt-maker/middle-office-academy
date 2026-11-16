@@ -1,0 +1,61 @@
+{
+  "number": 15,
+  "date": "2026-11-16",
+  "module": "M2 · Markets and prices",
+  "title": "Contango and backwardation: the shape of the curve",
+  "minutes": 11,
+  "story": "Monday, week three. Robin, the market risk manager, stops at your desk with two printed curves. *\"Same product, two different months. One goes up, one goes down. Traders read the shape before the level. Tell me what each one says about the market.\"*",
+  "objective": "I can recognise contango and backwardation on a forward curve and explain what each shape tells us.",
+  "write": [
+    {
+      "heading": "1. Two shapes",
+      "body": "On a forward curve (→ L13), compare the near tenors with the far tenors.\n- **Contango**: later prices are **higher** than near prices. The curve goes up.\n- **Backwardation**: later prices are **lower** than near prices. The curve goes down.\nDraw: two small graphs, one line going up (contango), one going down (backwardation)."
+    },
+    {
+      "heading": "2. What contango says",
+      "body": "The market has enough supply today. Holding the product costs money: **storage**, insurance, financing. So later delivery is dearer. If the gap is larger than the storage cost, a trader can buy now, store, and sell forward: a **cash-and-carry** trade, a kind of arbitrage (→ L2)."
+    },
+    {
+      "heading": "3. What backwardation says",
+      "body": "The product is **scarce now**. Buyers pay more to get it today than in some months. Storage is emptied, not filled."
+    },
+    {
+      "heading": "4. Example (illustrative, Brent, USD/bbl)",
+      "body": "| Tenor | Curve A | Curve B |\n|---|---|---|\n| M1 | 70 | 70 |\n| M3 | 72 | 68 |\n| M6 | 74 | 66 |\nCurve A is in contango, curve B in backwardation. Middle office check: if the shape flips in one night, ask why before using the curve."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is contango? And backwardation?",
+      "a": "Contango: far tenors are priced higher than near tenors (curve goes up). Backwardation: far tenors are priced lower than near tenors (curve goes down)."
+    },
+    {
+      "q": "Why is contango often linked to storage?",
+      "a": "When supply is ample, holding the product has a cost (storage, insurance, financing), so later delivery is dearer. If the gap is bigger than these costs, traders buy now, store and sell forward (cash-and-carry)."
+    },
+    {
+      "q": "Gas prices on a curve: January 34, April 28. Is this the same as backwardation?",
+      "a": "Not always: this drop is mostly seasonality (winter demand, L13). Compare the same season across years, or look at the trend, before calling a gas curve backwardated."
+    }
+  ],
+  "read_more": "Real-world examples: in April 2020, oil demand fell fast during COVID-19 lockdowns, storage filled up and the oil curve went into steep contango; the expiring May WTI futures contract even settled below zero on 20 April 2020. In 2022, European gas was strongly backwardated at times because supply was scarce. Gas and power curves also have a seasonal shape (winter dearer), so contango and backwardation are read mostly on oil and on same-season tenors. The Brent numbers in this lesson are illustrative only. Spreads between tenors (time spreads) come in L16.",
+  "next": "Next lesson (L16): spreads, the price difference between two times, two places or two qualities.",
+  "concepts": [
+    "contango",
+    "backwardation",
+    "cash-and-carry",
+    "cost of carry"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 13,
+      "why": "forward curve and tenors"
+    },
+    {
+      "lesson": 2,
+      "why": "arbitrage, cash-and-carry"
+    }
+  ]
+}

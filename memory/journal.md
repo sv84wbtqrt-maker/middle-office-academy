@@ -127,3 +127,19 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: contango/backwardation (L15), IPV (M6 lesson 86), curve building (M6 lesson 85), TTF-Q1 valued on the curve (lesson 20).
 - Words to copy: 232.
 - Learner feedback seen: L1 to L3, L5 to L10 right/right; L4 no feedback. W = 10, target = 13, so L12 and L13 prepared. No questions in the Sheet.
+
+## Lesson 14 · 2026-11-16 · Review: your second week, from Brent to forward curves
+- Module: M2 · Markets and prices (review)
+- Recap of L8 to L13 in six lines; mini case: 10 MW German baseload for January = 7,440 MWh, bought 90, curve 95, MtM +37,200 EUR (illustrative); three checks (unit, tenor, source).
+- Links made: (→ L8) to (→ L13).
+- Words to copy: 224.
+
+## Lesson 15 · 2026-11-16 · Contango and backwardation: the shape of the curve
+- Module: M2 · Markets and prices
+- Taught: contango, backwardation, cost of carry (storage, insurance, financing), cash-and-carry, seasonality vs backwardation trap on gas curves, overnight shape flip as a curve check.
+- Links made: (→ L13) forward curve, (→ L2) arbitrage (older lesson brought back).
+- Story: Robin (market risk) appears for the first time with two printed curves.
+- Facts used (read_more only): May 2020 WTI futures settled below zero on 20 April 2020; European gas backwardation at times in 2022. Brent table illustrative.
+- Planted for later: time spreads (L16), storage deals (M3 lesson 32), stress test 2020 negative WTI (M6 lesson 79).
+- Words to copy: 215.
+- Learner feedback seen: L1 to L3, L5 to L10, L12 right/right; L4 and L11 written without feedback. W = 12, target = 15, so L14 and L15 prepared. No questions in the Sheet.

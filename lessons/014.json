@@ -1,0 +1,75 @@
+{
+  "number": 14,
+  "date": "2026-11-16",
+  "module": "M2 · Markets and prices",
+  "title": "Review: your second week, from Brent to forward curves",
+  "minutes": 12,
+  "story": "Friday evening, week two. Sam puts six sticky notes on your screen: Brent, Platts, TTF, power, EUAs, curve. *\"Six markets in six days. Tonight, no new words. Tell me how they fit together, then value one small book for me, like you will do every evening.\"*",
+  "objective": "I can connect the six markets of week two and use them to value a small book.",
+  "write": [
+    {
+      "heading": "1. The week in six lines",
+      "body": "- **L8**: oil benchmarks Brent, WTI, Dubai; price = benchmark ± differential (→ L8).\n- **L9**: Platts and Argus publish price assessments used in contracts and MtM (→ L9).\n- **L10**: gas hubs TTF (EUR/MWh), NBP (p/therm), Henry Hub (USD/MMBtu), JKM (→ L10).\n- **L11**: power: day-ahead, intraday, baseload, peakload; MW × hours = MWh (→ L11).\n- **L12**: carbon: EU ETS, 1 EUA = 1 t CO2 (→ L12).\n- **L13**: forward curve: one price per tenor (→ L13)."
+    },
+    {
+      "heading": "2. Mini case: Dana's small book",
+      "body": "Example (illustrative): Dana bought 10 MW of German baseload power for January. January has 31 days, so 10 × 24 × 31 = **7,440 MWh**. Dana bought at 90 EUR/MWh. Tonight the January tenor of the power curve closes at 95. MtM = (95 − 90) × 7,440 = **+37,200 EUR**."
+    },
+    {
+      "heading": "3. What you check first",
+      "body": "Is the unit right (MWh, not MW)? Is the curve tenor January, not spot? Is the closing price from the right source? One wrong answer, and the P&L is wrong."
+    }
+  ],
+  "check": [
+    {
+      "q": "A crude is sold at \"Dated Brent minus 1.50\". What is Dated Brent here, and who publishes it?",
+      "a": "It is the benchmark price; the 1.50 USD/bbl is the differential. Dated Brent is a price assessment published by a price reporting agency such as Platts (L8, L9)."
+    },
+    {
+      "q": "Give the unit of TTF and of Henry Hub. Why is this a trap in a report?",
+      "a": "TTF: EUR/MWh. Henry Hub: USD/MMBtu. Different currency and energy unit, so the two numbers cannot be compared or added directly (L10)."
+    },
+    {
+      "q": "5 MW baseload for one day: how many MWh?",
+      "a": "5 × 24 = 120 MWh (L11)."
+    },
+    {
+      "q": "Why do power traders also watch the EUA price?",
+      "a": "A gas or coal plant must surrender EUAs for its CO2, so carbon is part of the cost of producing power (L12)."
+    }
+  ],
+  "read_more": "Flip back through L8 to L13 while you copy: each (→ L<n>) mark is a page to reread. The January power numbers are illustrative only. Note that the case values only the open trade with the curve, exactly as in L13: next lesson looks at the shape of that curve, contango and backwardation.",
+  "next": "Next lesson (L15): contango and backwardation, the two shapes of a forward curve and what they tell you.",
+  "concepts": [
+    "review m2 week 2",
+    "valuing a small book"
+  ],
+  "review": true,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 8,
+      "why": "benchmarks and differentials"
+    },
+    {
+      "lesson": 9,
+      "why": "price reporting agencies"
+    },
+    {
+      "lesson": 10,
+      "why": "gas hubs and units"
+    },
+    {
+      "lesson": 11,
+      "why": "power volume in MWh"
+    },
+    {
+      "lesson": 12,
+      "why": "carbon cost"
+    },
+    {
+      "lesson": 13,
+      "why": "forward curve for MtM"
+    }
+  ]
+}

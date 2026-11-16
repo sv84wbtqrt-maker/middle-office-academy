@@ -292,7 +292,49 @@
     3
    ],
    "words": 232
+  },
+  {
+   "number": 14,
+   "date": "2026-11-16",
+   "module": "M2 · Markets and prices",
+   "title": "Review: your second week, from Brent to forward curves",
+   "minutes": 12,
+   "review": true,
+   "concepts": [
+    "review m2 week 2",
+    "valuing a small book"
+   ],
+   "request_ids": [],
+   "links": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "words": 224
+  },
+  {
+   "number": 15,
+   "date": "2026-11-16",
+   "module": "M2 · Markets and prices",
+   "title": "Contango and backwardation: the shape of the curve",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "contango",
+    "backwardation",
+    "cash-and-carry",
+    "cost of carry"
+   ],
+   "request_ids": [],
+   "links": [
+    13,
+    2
+   ],
+   "words": 215
   }
  ],
- "latest": 13
+ "latest": 15
 }
