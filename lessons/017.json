@@ -1,0 +1,71 @@
+{
+  "number": 17,
+  "date": "2026-11-17",
+  "module": "M2 · Markets and prices",
+  "title": "Crack, spark and dark spreads: the margin of a plant",
+  "minutes": 11,
+  "story": "Chris and Dana are arguing, but in a friendly way. Chris: *\"My refinery margin is better than your power plant margin.\"* Dana: *\"Not after carbon!\"* Sam laughs and turns to you: *\"Both are spreads, like yesterday. But here, one leg is the raw material and the other leg is what the plant makes from it.\"*",
+  "objective": "I can calculate a simple crack spread and a clean spark spread and say what they measure.",
+  "write": [
+    {
+      "heading": "1. Input against output",
+      "body": "A plant turns an input into an output. The spread between them (→ L16) is a simple measure of the plant's **margin**, before its operating costs."
+    },
+    {
+      "heading": "2. Crack spread (refining)",
+      "body": "A refinery 'cracks' crude oil into products (→ L4). **Crack spread** = product price minus crude price, both in USD/bbl.\nExample (illustrative): diesel 90, Brent 70: diesel crack = 20 USD/bbl.\nUnit trap: diesel is often quoted in USD/t. Convert to USD/bbl first."
+    },
+    {
+      "heading": "3. Spark and dark spreads (power)",
+      "body": "**Spark spread** = power price minus the cost of gas to make 1 MWh. **Dark spread**: the same with coal. A **clean** spread also takes away the carbon cost (→ L12).\nExample (illustrative): power 100 EUR/MWh (→ L11). Gas 35 EUR/MWh, plant needs 2 MWh of gas per MWh of power: 70. Spark = 30. Carbon 0.4 t × 70 EUR/t = 28. Clean spark = 2."
+    },
+    {
+      "heading": "4. Why middle office cares",
+      "body": "These are spread positions with two or three legs and different units. Check each leg and each unit."
+    }
+  ],
+  "check": [
+    {
+      "q": "What does a crack spread measure?",
+      "a": "The gap between the price of a refined product and the price of crude: a simple measure of the refining margin (before operating costs)."
+    },
+    {
+      "q": "What is the difference between a spark spread and a clean spark spread?",
+      "a": "Spark spread = power price minus gas cost. Clean spark spread also takes away the carbon (EUA) cost."
+    },
+    {
+      "q": "Power 90, gas 30 EUR/MWh, 2 MWh of gas per MWh, carbon cost 25 EUR/MWh. Clean spark?",
+      "a": "90 - (2 × 30) - 25 = 5 EUR/MWh."
+    }
+  ],
+  "read_more": "Refiners and traders often follow a '3-2-1 crack' (3 barrels of crude give about 2 of gasoline and 1 of diesel) as a rough refinery margin. Gasoil futures on ICE are quoted in USD per tonne, so they are converted to barrels before comparing with Brent (the factor depends on the product density). The efficiency of a gas plant (here 50%, so 2 MWh of gas per MWh of power) and of a coal plant varies by plant. All prices and factors in this lesson are illustrative.",
+  "next": "Next lesson (L18): where trades happen, exchanges (ICE, CME, EEX) against OTC deals and brokers.",
+  "concepts": [
+    "crack spread",
+    "refining margin",
+    "spark spread",
+    "dark spread",
+    "clean spark spread",
+    "plant efficiency"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 16,
+      "why": "a plant margin is a spread"
+    },
+    {
+      "lesson": 12,
+      "why": "carbon cost in the clean spark spread"
+    },
+    {
+      "lesson": 11,
+      "why": "power price in EUR/MWh"
+    },
+    {
+      "lesson": 4,
+      "why": "refined products and unit check"
+    }
+  ]
+}

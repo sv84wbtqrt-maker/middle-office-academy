@@ -1,0 +1,67 @@
+{
+  "number": 18,
+  "date": "2026-11-17",
+  "module": "M2 · Markets and prices",
+  "title": "Exchanges and OTC: where trades are done",
+  "minutes": 11,
+  "story": "At 4 p.m. the floor gets loud. Chris is on the phone with a broker, Dana clicks on an exchange screen. Lee, from the back office, stops at your desk: *\"Both just traded gas. But one trade goes through a clearing house and one does not. For me, and for you, that changes everything.\"*",
+  "objective": "I can explain the difference between an exchange trade and an OTC trade, and the role of a broker.",
+  "write": [
+    {
+      "heading": "1. Exchange trades",
+      "body": "An **exchange** is a regulated market with **standard contracts** (futures, → L5). Main energy exchanges: **ICE** (Brent, gasoil, TTF), **CME** (WTI, Henry Hub), **EEX** (European power, EUAs). A **clearing house** stands between buyer and seller and asks both for **margin** (cash or collateral). If one side fails, the clearing house pays."
+    },
+    {
+      "heading": "2. OTC trades",
+      "body": "**OTC** (over the counter) means a deal agreed directly between two companies, without an exchange. Terms can be tailored: volume, dates, place. But each side takes the **credit risk** of the other side (the counterparty, → L1)."
+    },
+    {
+      "heading": "3. Brokers",
+      "body": "A **broker** finds a buyer for a seller, by phone, chat or screen, and takes a fee. The broker is not part of the trade. Brokers often confirm the deal terms; their quotes can help check prices (→ L9)."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "For each trade, know the **venue**: exchange or OTC? If exchange: check against the clearing statement. If OTC: check the counterparty and its credit limit."
+    }
+  ],
+  "check": [
+    {
+      "q": "Name two main energy exchanges and one product traded on each.",
+      "a": "For example: ICE (Brent futures, TTF), CME (WTI, Henry Hub), EEX (European power, EUAs)."
+    },
+    {
+      "q": "What does a clearing house do?",
+      "a": "It stands between buyer and seller, asks both for margin, and pays if one side fails. So the counterparty risk is on the clearing house, not on the other trader."
+    },
+    {
+      "q": "Give one advantage and one risk of an OTC trade.",
+      "a": "Advantage: tailored terms (volume, dates, place). Risk: credit risk on the counterparty, which may not pay or deliver."
+    }
+  ],
+  "read_more": "ICE runs ICE Futures Europe (Brent and gasoil futures) and ICE Endex (TTF and other European gas). CME Group owns NYMEX, where WTI and Henry Hub futures trade. EEX (part of Deutsche Börse) is a leading exchange for European power and EU carbon allowances. Some OTC trades are later sent to a clearing house to reduce credit risk ('cleared OTC'). Margin, clearing and credit risk come back in detail in modules 3 and 7.",
+  "next": "Next lesson (L19): shipping and freight basics, how oil travels and what it costs.",
+  "concepts": [
+    "exchange",
+    "otc",
+    "clearing house",
+    "margin",
+    "broker",
+    "trading venue"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 5,
+      "why": "futures are standard exchange contracts"
+    },
+    {
+      "lesson": 1,
+      "why": "counterparty"
+    },
+    {
+      "lesson": 9,
+      "why": "price checks with outside quotes"
+    }
+  ]
+}

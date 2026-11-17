@@ -1,0 +1,63 @@
+{
+  "number": 16,
+  "date": "2026-11-17",
+  "module": "M2 · Markets and prices",
+  "title": "Spreads: two times, two places, two qualities",
+  "minutes": 13,
+  "story": "Robin comes back with a new sheet. *\"Yesterday you read the shape of a curve. Today, read the gap between two prices. Half of Chris's book is not 'oil goes up or down' but 'this price against that price'. We call it a spread.\"* Chris nods from the next desk: *\"I often don't care where Brent goes. I care about the gap.\"*",
+  "objective": "I can explain the three main types of spread and check that a spread trade is booked correctly.",
+  "write": [
+    {
+      "heading": "1. What is a spread?",
+      "body": "A **spread** is the difference between two prices: price A minus price B. A trader who buys A and sells B at the same time has a **spread position**. The trader wins if the gap moves the right way, even if both prices fall. Each side of the trade is called a **leg**."
+    },
+    {
+      "heading": "2. Three types",
+      "body": "| Type | Gap between | Example |\n|---|---|---|\n| **Time spread** | two tenors | Brent M1 minus M3 |\n| **Location spread** | two places | Brent minus WTI (→ L8) |\n| **Quality spread** | two grades | sweet minus sour crude |\nA time spread is the curve shape in one number (→ L15): positive M1 minus M3 means backwardation."
+    },
+    {
+      "heading": "3. Example (illustrative, USD/bbl)",
+      "body": "Chris buys Brent M1 at 70 and sells M3 at 68: spread +2. A week later, M1 = 66 and M3 = 63: spread +3. Both prices fell, but the spread widened by 1, so Chris gains 1 USD/bbl."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "A spread is two trades, not one. Check that **both legs** are booked, with the same volume and opposite directions (buy / sell). A missing leg turns a small spread risk into a big open price risk."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is a spread position? What is a leg?",
+      "a": "Buying one price and selling another at the same time, to win on the gap between them. Each side (the buy and the sell) is a leg."
+    },
+    {
+      "q": "Give one example of a time, a location and a quality spread.",
+      "a": "Time: Brent M1 minus Brent M3. Location: Brent minus WTI. Quality: sweet crude minus sour crude (or light minus heavy)."
+    },
+    {
+      "q": "Only the buy leg of a spread is in the system. Why is it serious?",
+      "a": "The book now shows a full open price position instead of a small spread risk: P&L and risk reports are wrong. Find and book the missing leg, or escalate."
+    }
+  ],
+  "read_more": "Spreads are traded a lot in energy: time spreads on Brent and WTI futures, the Brent-WTI location spread, and differentials between crude grades. On exchanges, some spreads can be traded as one order with two legs. Gas and power have their own location spreads (for example TTF against NBP) and time spreads (summer against winter, linked to storage). All numbers in this lesson are illustrative. Spreads between a raw material and its products (crack, spark and dark spreads) come in L17.",
+  "next": "Next lesson (L17): crack, spark and dark spreads, the margin of a refinery and of a power plant.",
+  "concepts": [
+    "spread",
+    "leg",
+    "spread position",
+    "time spread",
+    "location spread",
+    "quality spread"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 15,
+      "why": "time spread shows the curve shape"
+    },
+    {
+      "lesson": 8,
+      "why": "Brent-WTI location spread, light/sweet grades"
+    }
+  ]
+}

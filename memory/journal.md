@@ -143,3 +143,30 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: time spreads (L16), storage deals (M3 lesson 32), stress test 2020 negative WTI (M6 lesson 79).
 - Words to copy: 215.
 - Learner feedback seen: L1 to L3, L5 to L10, L12 right/right; L4 and L11 written without feedback. W = 12, target = 15, so L14 and L15 prepared. No questions in the Sheet.
+
+## Lesson 16 · 2026-11-17 · Spreads: two times, two places, two qualities
+- Module: M2 · Markets and prices
+- Taught: spread, leg, spread position, time / location / quality spreads, illustrative Brent M1-M3 widening from +2 to +3 while both prices fell, check that both legs are booked (same volume, opposite directions).
+- Links made: (→ L15) time spread = curve shape in one number, (→ L8) Brent-WTI location spread (older lesson brought back).
+- Story: Robin's second visit; Chris "I care about the gap".
+- Planted for later: TTF-NBP location spread, summer-winter storage spreads (M3 lesson 32), exchange spread orders (L18).
+- Words to copy: 241.
+
+## Lesson 17 · 2026-11-17 · Crack, spark and dark spreads: the margin of a plant
+- Module: M2 · Markets and prices
+- Taught: input vs output spread as plant margin, crack spread (USD/bbl, USD/t unit trap), spark / dark / clean spark spread; illustrative clean spark: 100 - 2 × 35 - 0.4 × 70 = 2 EUR/MWh (same 0.4 t/MWh and 70 EUR/t as L12).
+- Links made: (→ L16) spread, (→ L12) carbon cost, (→ L11) power price, (→ L4) products and units (older lesson).
+- Story: Chris and Dana's friendly argument on margins.
+- Facts used (read_more only): 3-2-1 crack as a rule of thumb; ICE gasoil quoted in USD/t. All prices and the 50% efficiency illustrative.
+- Planted for later: power spread story object (tolling, M3 lesson 32), refinery optimisation, P&L of multi-leg positions (M5).
+- Words to copy: 215.
+
+## Lesson 18 · 2026-11-17 · Exchanges and OTC: where trades are done
+- Module: M2 · Markets and prices
+- Taught: exchange, standard contracts, ICE / CME / EEX with main products, clearing house, margin, OTC (tailored, bilateral credit risk), broker (fee, not a party, confirms terms, quotes help price checks), venue check (clearing statement vs counterparty credit limit).
+- Links made: (→ L5) futures, (→ L1) counterparty (older lesson), (→ L9) outside price sources.
+- Story: Lee (back office) appears for the first time at 4 p.m.
+- Facts used: ICE Futures Europe (Brent, gasoil), ICE Endex (TTF), CME/NYMEX (WTI, Henry Hub), EEX (European power, EUAs), public exchange information.
+- Planted for later: futures margin and daily settlement (M3 lesson 24), cleared OTC and CCPs (M7 lesson 99), confirmations (M4 lesson 41), broker fees reconciliation.
+- Words to copy: 207.
+- Learner feedback seen: L1 to L3, L5 to L10, L12, L14, L15 right/right; L4, L11, L13 written without feedback. W = 15, target = 18, so L16, L17 and L18 prepared. No questions in the Sheet.

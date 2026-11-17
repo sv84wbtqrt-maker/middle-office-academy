@@ -334,7 +334,76 @@
     2
    ],
    "words": 215
+  },
+  {
+   "number": 16,
+   "date": "2026-11-17",
+   "module": "M2 · Markets and prices",
+   "title": "Spreads: two times, two places, two qualities",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "spread",
+    "leg",
+    "spread position",
+    "time spread",
+    "location spread",
+    "quality spread"
+   ],
+   "request_ids": [],
+   "links": [
+    15,
+    8
+   ],
+   "words": 241
+  },
+  {
+   "number": 17,
+   "date": "2026-11-17",
+   "module": "M2 · Markets and prices",
+   "title": "Crack, spark and dark spreads: the margin of a plant",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "crack spread",
+    "refining margin",
+    "spark spread",
+    "dark spread",
+    "clean spark spread",
+    "plant efficiency"
+   ],
+   "request_ids": [],
+   "links": [
+    16,
+    12,
+    11,
+    4
+   ],
+   "words": 215
+  },
+  {
+   "number": 18,
+   "date": "2026-11-17",
+   "module": "M2 · Markets and prices",
+   "title": "Exchanges and OTC: where trades are done",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "exchange",
+    "otc",
+    "clearing house",
+    "margin",
+    "broker",
+    "trading venue"
+   ],
+   "request_ids": [],
+   "links": [
+    5,
+    1,
+    9
+   ],
+   "words": 207
   }
  ],
- "latest": 15
+ "latest": 18
 }

@@ -8,7 +8,9 @@
   "600,000 bbl cargo": "used as an illustrative hedge example in L5; becomes Cargo NS-01 in lesson 20",
   "Dana": "gas and power trader, leads L10 (gas hubs), L11 (power markets) and L12 (carbon)",
   "Forward curves": "introduced in L13 (TTF curve example); shapes (contango/backwardation) in L15; time spreads in L16",
-  "Robin": "market risk manager, first appears in L15 (curve shapes)"
+  "Robin": "market risk manager, first appears in L15 (curve shapes), back in L16 (spreads)",
+  "Lee": "back office / operations, first appears in L18 (exchange vs OTC)",
+  "Spreads": "L16 time/location/quality; L17 crack, spark, dark (illustrative clean spark = 2 EUR/MWh); power spread object planned later"
  },
- "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12). Keep 190 to 260 words to copy."
+ "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12, L14, L15). Keep 190 to 260 words to copy. L19 = shipping and freight, L20 = Cargo NS-01 and TTF-Q1, L21 = review of L15-L20."
 }
