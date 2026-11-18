@@ -1,0 +1,77 @@
+{
+  "number": 19,
+  "date": "2026-11-18",
+  "module": "M2 · Markets and prices",
+  "title": "Shipping and freight: Worldscale, charters and demurrage",
+  "minutes": 13,
+  "story": "Next morning, Chris is on the phone again, but this time with a **shipbroker**. *\"I found cheap oil in the North Sea and a buyer in the Mediterranean. Nice spread. But the oil does not fly. If the ship costs too much, or waits five days at the port, my profit is gone.\"* Sam whispers to you: *\"Freight is a cost line in every cargo P&L. Learn its words today.\"*",
+  "objective": "I can explain how a tanker is hired, read a Worldscale freight rate and explain demurrage.",
+  "write": [
+    {
+      "heading": "1. Ships and sizes",
+      "body": "Oil crosses the sea on **tankers** (midstream, → L3). Typical sizes: **VLCC** about 2 million bbl, **Suezmax** about 1 million bbl, **Aframax** about 700,000 bbl.\nThe **shipowner** owns the ship. The **charterer** (our desk) hires it, under a contract called the **charter party**."
+    },
+    {
+      "heading": "2. Two ways to hire a ship",
+      "body": "- **Voyage charter**: pay for one trip, A to B. The owner pays fuel and port costs.\n- **Time charter**: hire the ship for months at a **daily rate**. The charterer pays fuel and port costs.\nShips are found through **shipbrokers** (→ L18)."
+    },
+    {
+      "heading": "3. Worldscale",
+      "body": "Tanker voyage rates are often quoted in **Worldscale (WS)**. A yearly table gives a **flat rate** in USD/t for each route: this is **WS 100**. A deal is a percentage of it.\nExample (illustrative): flat rate 20 USD/t at WS 75 → **15 USD/t**."
+    },
+    {
+      "heading": "4. Laytime and demurrage",
+      "body": "**Laytime** = the time allowed to load and unload. If the ship waits longer, the charterer pays **demurrage**: a daily rate fixed in the charter party.\nExample (illustrative): 1.5 days late × 40,000 USD/day = **60,000 USD**."
+    },
+    {
+      "heading": "5. Middle office check",
+      "body": "A location spread (→ L16) only makes money if it is bigger than freight. Check that freight and demurrage are booked in the cargo P&L."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is the difference between a voyage charter and a time charter?",
+      "a": "Voyage charter: you pay for one trip from A to B; the owner pays fuel and port costs. Time charter: you hire the ship for a period at a daily rate and you pay fuel and port costs."
+    },
+    {
+      "q": "The flat rate is 30 USD/t and the deal is WS 80. What is the freight cost per tonne?",
+      "a": "30 × 0.80 = 24 USD per tonne (illustrative numbers)."
+    },
+    {
+      "q": "What is demurrage, and who usually pays it?",
+      "a": "Money paid when a ship stays longer than the laytime (time allowed to load and unload). It is a daily rate in the charter party, usually paid by the charterer to the shipowner."
+    }
+  ],
+  "read_more": "Worldscale flat rates (WS 100) are published every year by the Worldscale Association (London and New York) and take effect on 1 January; they are in USD per tonne for each route. Tanker sizes are ranges: a VLCC (Very Large Crude Carrier) is typically about 200,000 to 320,000 deadweight tonnes. Freight rates are also tracked by the Baltic Exchange, and freight can be hedged with forward freight agreements (FFAs), a topic for later. TotalEnergies' trading arm is named 'Trading & Shipping', which shows how closely the two activities are linked; its internal shipping set-up is not described in this course. All rates in this lesson are illustrative.",
+  "next": "Next lesson (L20): meet Cargo NS-01 and TTF-Q1, the two trades you will follow until the end of the course.",
+  "concepts": [
+    "tanker",
+    "vlcc / suezmax / aframax",
+    "shipowner",
+    "charterer",
+    "charter party",
+    "voyage charter",
+    "time charter",
+    "shipbroker",
+    "worldscale",
+    "flat rate",
+    "laytime",
+    "demurrage"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 3,
+      "why": "shipping is midstream in the value chain"
+    },
+    {
+      "lesson": 18,
+      "why": "shipbrokers work like OTC brokers"
+    },
+    {
+      "lesson": 16,
+      "why": "a location spread must pay for the freight"
+    }
+  ]
+}

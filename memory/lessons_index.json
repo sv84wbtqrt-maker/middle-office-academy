@@ -403,7 +403,36 @@
     9
    ],
    "words": 207
+  },
+  {
+   "number": 19,
+   "date": "2026-11-18",
+   "module": "M2 · Markets and prices",
+   "title": "Shipping and freight: Worldscale, charters and demurrage",
+   "minutes": 13,
+   "review": false,
+   "concepts": [
+    "tanker",
+    "vlcc / suezmax / aframax",
+    "shipowner",
+    "charterer",
+    "charter party",
+    "voyage charter",
+    "time charter",
+    "shipbroker",
+    "worldscale",
+    "flat rate",
+    "laytime",
+    "demurrage"
+   ],
+   "request_ids": [],
+   "links": [
+    3,
+    18,
+    16
+   ],
+   "words": 259
   }
  ],
- "latest": 18
+ "latest": 19
 }

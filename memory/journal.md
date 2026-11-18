@@ -170,3 +170,13 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: futures margin and daily settlement (M3 lesson 24), cleared OTC and CCPs (M7 lesson 99), confirmations (M4 lesson 41), broker fees reconciliation.
 - Words to copy: 207.
 - Learner feedback seen: L1 to L3, L5 to L10, L12, L14, L15 right/right; L4, L11, L13 written without feedback. W = 15, target = 18, so L16, L17 and L18 prepared. No questions in the Sheet.
+
+## Lesson 19 · 2026-11-18 · Shipping and freight: Worldscale, charters and demurrage
+- Module: M2 · Markets and prices
+- Taught: tanker sizes (VLCC ~2 million bbl, Suezmax ~1 million, Aframax ~700,000 bbl, typical), shipowner / charterer / charter party, voyage vs time charter (who pays fuel and port costs), shipbroker, Worldscale flat rate = WS 100 (illustrative 20 USD/t at WS 75 = 15 USD/t), laytime and demurrage (illustrative 1.5 days × 40,000 USD/day = 60,000 USD), check that freight and demurrage are in the cargo P&L.
+- Links made: (→ L3) midstream (older lesson brought back), (→ L18) brokers, (→ L16) location spread must beat freight.
+- Story: Chris on the phone with a shipbroker, North Sea to Mediterranean arbitrage; Sam: "freight is a cost line in every cargo P&L".
+- Facts used (read_more only): Worldscale flat rates published yearly by the Worldscale Association, in USD/t, effective 1 January; VLCC ~200,000-320,000 dwt; Baltic Exchange; FFAs. All rates illustrative.
+- Planted for later: Cargo NS-01 (600,000 bbl fits an Aframax) in L20, Incoterms and who books the ship (M3 lesson 23), freight in physical P&L (M5 lesson 64), FFAs as freight hedges, demurrage claims in settlement (M4).
+- Words to copy: 259.
+- Learner feedback seen: L1 to L3, L5 to L10, L12, L14, L15, L16 right/right; L4, L11, L13 written without feedback. W = 16, target = 19, N = 18, so only L19 prepared. No questions in the Sheet.
