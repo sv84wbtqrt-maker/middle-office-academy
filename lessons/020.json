@@ -1,0 +1,71 @@
+{
+  "number": 20,
+  "date": "2026-11-19",
+  "module": "M2 · Markets and prices",
+  "title": "Meet Cargo NS-01 and TTF-Q1: the two trades you will follow",
+  "minutes": 12,
+  "story": "Sam puts two printed trade tickets on your desk. *\"From today, these two are yours. Chris bought a North Sea cargo yesterday, and Dana bought gas for next winter. You will follow them every week: their price, their risk, their P&L, their invoices. When you know their whole life, you know the job.\"* Chris adds: *\"And yes, it is the 600,000 barrels from your first week.\"*",
+  "objective": "I can read the key data of a physical oil trade and a gas trade, and value the gas trade with the forward curve.",
+  "write": [
+    {
+      "heading": "1. Cargo NS-01 (Chris, crude oil)",
+      "body": "| Field | Value (illustrative) |\n|---|---|\n| Direction | Buy |\n| Quantity | 600,000 bbl North Sea crude |\n| Price | Dated Brent + 0.50 USD/bbl |\n| Delivery | loading next month, on an Aframax (→ L19) |\n\nChris hedges the price risk by selling 600 Brent futures (1 lot = 1,000 bbl) (→ L5)."
+    },
+    {
+      "heading": "2. TTF-Q1 (Dana, gas)",
+      "body": "Dana buys **1,000 MWh per day** of TTF gas for **Q1** (January to March, 90 days).\nTotal = 1,000 × 90 = **90,000 MWh** at **35 EUR/MWh** (example)."
+    },
+    {
+      "heading": "3. Valuing TTF-Q1",
+      "body": "Tonight the Q1 tenor of the TTF curve (→ L13) is 37 EUR/MWh (example).\nMtM = (37 − 35) × 90,000 = **+180,000 EUR**. Dana bought, the price went up: a gain, not yet realised."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Every trade needs the same key fields: trade ID, direction, product, quantity and unit, price, delivery period and place, counterparty, book (→ L1). One missing field = a wrong report tomorrow."
+    }
+  ],
+  "check": [
+    {
+      "q": "How many Brent futures lots hedge 600,000 bbl, and should Chris buy or sell them?",
+      "a": "600 lots (600,000 / 1,000). Chris sells them: the desk owns the physical oil, so it loses if the price falls; the short futures gain when the price falls."
+    },
+    {
+      "q": "The Q1 tenor falls to 34 EUR/MWh. What is the MtM of TTF-Q1?",
+      "a": "(34 − 35) × 90,000 = −90,000 EUR (illustrative numbers): a loss, because Dana bought at 35."
+    },
+    {
+      "q": "Name five key fields of a trade.",
+      "a": "Any five of: trade ID, direction (buy/sell), product, quantity and unit, price, delivery period and place, counterparty, book."
+    }
+  ],
+  "read_more": "Dated Brent is the price assessment of physical North Sea cargoes published by Platts (→ L9); many North Sea and Atlantic Basin crudes are sold at Dated Brent plus or minus a differential. One ICE Brent futures contract is 1,000 barrels. TTF quarterly contracts (Q1 = January, February, March) are traded on ICE Endex and over the counter; in a non-leap year Q1 has 90 days. All prices, the differential and the delivery dates of Cargo NS-01 and TTF-Q1 are illustrative, and Northbridge is fictional. In the next modules you will see how these two trades are confirmed, priced over a pricing period, hedged with swaps, reported in the daily P&L and risk reports, and finally invoiced and settled.",
+  "next": "Next lesson (L21): review of week three, from curve shapes to your two trades.",
+  "concepts": [
+    "story object cargo ns-01",
+    "story object ttf-q1",
+    "dated brent",
+    "futures lot",
+    "quarterly gas contract",
+    "key trade fields"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 19,
+      "why": "the cargo sails on an Aframax"
+    },
+    {
+      "lesson": 13,
+      "why": "TTF-Q1 is valued with the tenor price of the forward curve"
+    },
+    {
+      "lesson": 5,
+      "why": "the futures hedge of the 600,000 bbl cargo"
+    },
+    {
+      "lesson": 1,
+      "why": "book and counterparty are key trade fields"
+    }
+  ]
+}

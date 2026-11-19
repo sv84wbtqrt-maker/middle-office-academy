@@ -180,3 +180,13 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: Cargo NS-01 (600,000 bbl fits an Aframax) in L20, Incoterms and who books the ship (M3 lesson 23), freight in physical P&L (M5 lesson 64), FFAs as freight hedges, demurrage claims in settlement (M4).
 - Words to copy: 259.
 - Learner feedback seen: L1 to L3, L5 to L10, L12, L14, L15, L16 right/right; L4, L11, L13 written without feedback. W = 16, target = 19, N = 18, so only L19 prepared. No questions in the Sheet.
+
+## Lesson 20 · 2026-11-19 · Meet Cargo NS-01 and TTF-Q1: the two trades you will follow
+- Module: M2 · Markets and prices
+- Taught: the two story objects. Cargo NS-01: buy 600,000 bbl North Sea crude at Dated Brent + 0.50 USD/bbl, loading next month on an Aframax, hedged by selling 600 Brent futures (1 lot = 1,000 bbl). TTF-Q1: Dana buys 1,000 MWh/day for Q1 (90 days) = 90,000 MWh at 35 EUR/MWh; MtM at curve 37 = +180,000 EUR (all illustrative). Key trade fields (trade ID, direction, product, quantity and unit, price, delivery period and place, counterparty, book).
+- Links made: (→ L19) Aframax, (→ L13) forward curve tenor, (→ L5) futures hedge, (→ L1) book and counterparty (older lesson).
+- Story: Sam hands over two printed trade tickets; "these two are yours"; Chris recalls the 600,000 bbl from week one.
+- Facts used: ICE Brent futures lot = 1,000 bbl; Dated Brent assessed by Platts; TTF quarterly contracts on ICE Endex. Prices, differential and dates illustrative.
+- Planted for later: trade ticket and capture (M4 lessons 36-37), pricing period of NS-01 (M3 lesson 26), swap hedge of NS-01 (M3 lesson 25), basis risk Dated Brent vs futures (M3 lesson 33), TTF-Q1 P&L explain (M5 lesson 58), TTF-Q1 limit breach (M6 lesson 89).
+- Words to copy: 199.
+- Learner feedback seen: L1 to L3, L5 to L10, L12, L14 to L17 right/right; L4, L11, L13 written without feedback. W = 17, target = 20, N = 19, so only L20 prepared. No questions in the Sheet.

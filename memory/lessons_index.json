@@ -432,7 +432,31 @@
     16
    ],
    "words": 259
+  },
+  {
+   "number": 20,
+   "date": "2026-11-19",
+   "module": "M2 · Markets and prices",
+   "title": "Meet Cargo NS-01 and TTF-Q1: the two trades you will follow",
+   "minutes": 12,
+   "review": false,
+   "concepts": [
+    "story object cargo ns-01",
+    "story object ttf-q1",
+    "dated brent",
+    "futures lot",
+    "quarterly gas contract",
+    "key trade fields"
+   ],
+   "request_ids": [],
+   "links": [
+    19,
+    13,
+    5,
+    1
+   ],
+   "words": 199
   }
  ],
- "latest": 19
+ "latest": 20
 }

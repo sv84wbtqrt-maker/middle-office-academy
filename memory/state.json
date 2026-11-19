@@ -3,9 +3,9 @@
  "handled_requests": [],
  "scheduled_requests": [],
  "story_objects": {
-  "Cargo NS-01": "not introduced yet (planned lesson 20; freight words ready from L19)",
-  "TTF-Q1": "not introduced yet (planned lesson 20)",
-  "600,000 bbl cargo": "used as an illustrative hedge example in L5; becomes Cargo NS-01 in lesson 20",
+  "Cargo NS-01": "introduced in L20: buy 600,000 bbl North Sea crude at Dated Brent + 0.50 USD/bbl (illustrative), loading next month on an Aframax, hedged by selling 600 ICE Brent futures",
+  "TTF-Q1": "introduced in L20: Dana buys 1,000 MWh/day for Q1 = 90,000 MWh at 35 EUR/MWh; MtM at curve 37 = +180,000 EUR (illustrative)",
+  "600,000 bbl cargo": "hedge example in L5, became Cargo NS-01 in L20",
   "Dana": "gas and power trader, leads L10 (gas hubs), L11 (power markets) and L12 (carbon)",
   "Forward curves": "introduced in L13 (TTF curve example); shapes (contango/backwardation) in L15; time spreads in L16",
   "Robin": "market risk manager, first appears in L15 (curve shapes), back in L16 (spreads)",
@@ -13,5 +13,5 @@
   "Spreads": "L16 time/location/quality; L17 crack, spark, dark (illustrative clean spark = 2 EUR/MWh); power spread object planned later",
   "Freight": "L19: voyage vs time charter, Worldscale, demurrage; Chris's North Sea to Mediterranean arbitrage; Cargo NS-01 (600,000 bbl) can sail on an Aframax"
  },
- "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12, L14-L16). Keep 190 to 260 words to copy. L20 = Cargo NS-01 and TTF-Q1 (use L19 freight: Aframax, demurrage), L21 = review of L15-L20."
+ "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12, L14-L17). Keep 190 to 260 words to copy. L21 = review of L15-L20 (mini case with Cargo NS-01 and TTF-Q1). Then M3 instruments from L22 (physical contracts), reuse NS-01 and TTF-Q1 as examples."
 }
