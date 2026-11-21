@@ -1,0 +1,61 @@
+{
+  "number": 22,
+  "date": "2026-11-21",
+  "module": "M3 · Instruments",
+  "title": "Physical contracts: term vs spot, and the key clauses",
+  "minutes": 12,
+  "story": "Monday, week four. Lee from the back office drops a thick document on your desk: the contract behind Cargo NS-01. *\"Chris agreed the deal on the phone in two minutes. This is what it really says. If the system and the contract do not match, I send the wrong invoice.\"* Sam adds: *\"You do not need to read every page. You need to know which clauses change the money.\"*",
+  "objective": "I can explain the difference between a spot and a term contract and name the key clauses that middle office checks.",
+  "write": [
+    {
+      "heading": "1. Spot or term?",
+      "body": "- **Spot contract**: one single delivery, for example one cargo. Cargo NS-01 is a spot deal (→ L20).\n- **Term contract**: many deliveries over a long period (for example one cargo per month for a year), at a price formula agreed once."
+    },
+    {
+      "heading": "2. The key clauses",
+      "body": "| Clause | What it says |\n|---|---|\n| Quantity | volume and **tolerance** (for example ±5%) |\n| Quality | the **specification** of the crude (density, sulphur) |\n| Delivery | place, and **laycan**: the window of dates when the ship must arrive |\n| Price | a **formula**: benchmark ± differential (→ L8) |\n| Payment | when and how (typically about 30 days after loading) |"
+    },
+    {
+      "heading": "3. Other important words",
+      "body": "- **GTCs** (general terms and conditions): standard rules added to the deal, so each contract stays short.\n- **Force majeure**: an event outside control (storm, war) that excuses a party.\n- **Laytime and demurrage** clauses (→ L19) say who pays if the ship waits."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Example: the contract says 600,000 bbl ±5%, so between 570,000 and 630,000 bbl can be loaded. If 612,000 bbl are loaded, the P&L and the invoice must use 612,000, not 600,000."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is the difference between a spot and a term contract?",
+      "a": "A spot contract covers one single delivery (for example one cargo). A term contract covers many deliveries over a long period, at a price formula agreed once."
+    },
+    {
+      "q": "What is a laycan?",
+      "a": "The window of dates in which the ship must arrive to load. If it comes outside the window, the contract says what happens (for example the buyer can cancel)."
+    },
+    {
+      "q": "A contract says 600,000 bbl ±5%. What range can be loaded, and which volume goes into the P&L?",
+      "a": "Between 570,000 and 630,000 bbl. The P&L and the invoice use the volume really loaded, not the nominal 600,000 (illustrative numbers)."
+    }
+  ],
+  "read_more": "In oil, many companies publish their own general terms and conditions (GTCs), and a deal confirmation often just says which GTCs apply, plus the deal-specific terms (quantity, price, dates). In gas and power, European deals are often done under standard master agreements such as the EFET General Agreement; master agreements come back in module 7. The volume really loaded is typically measured at the loading port and written on the **bill of lading**, a key shipping document you will meet soon. The ±5% tolerance, the 30-day payment term and the 612,000 bbl are illustrative; real terms vary from contract to contract. The next lesson explains Incoterms (FOB, CIF, DES): who pays for the ship and when the risk passes from seller to buyer.",
+  "next": "Next lesson (L23): Incoterms in oil (FOB, CIF, DES): who pays the ship, and when risk and ownership pass to the buyer.",
+  "concepts": [
+    "spot contract",
+    "term contract",
+    "volume tolerance",
+    "quality specification",
+    "laycan",
+    "price formula",
+    "payment terms",
+    "general terms and conditions (gtcs)",
+    "force majeure"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {"lesson": 20, "why": "Cargo NS-01 is a spot deal"},
+    {"lesson": 8, "why": "price formula = benchmark ± differential"},
+    {"lesson": 19, "why": "laytime and demurrage clauses"}
+  ]
+}

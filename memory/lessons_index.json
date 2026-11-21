@@ -456,7 +456,55 @@
     1
    ],
    "words": 199
+  },
+  {
+   "number": 21,
+   "date": "2026-11-21",
+   "module": "M2 · Markets and prices",
+   "title": "Review: your third week, from curve shapes to your two trades",
+   "minutes": 13,
+   "review": true,
+   "concepts": [
+    "review m2 week 3",
+    "evening check of the story trades"
+   ],
+   "request_ids": [],
+   "links": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "words": 257
+  },
+  {
+   "number": 22,
+   "date": "2026-11-21",
+   "module": "M3 · Instruments",
+   "title": "Physical contracts: term vs spot, and the key clauses",
+   "minutes": 12,
+   "review": false,
+   "concepts": [
+    "spot contract",
+    "term contract",
+    "volume tolerance",
+    "quality specification",
+    "laycan",
+    "price formula",
+    "payment terms",
+    "general terms and conditions (gtcs)",
+    "force majeure"
+   ],
+   "request_ids": [],
+   "links": [
+    20,
+    8,
+    19
+   ],
+   "words": 228
   }
  ],
- "latest": 20
+ "latest": 22
 }

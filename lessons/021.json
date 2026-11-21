@@ -1,0 +1,57 @@
+{
+  "number": 21,
+  "date": "2026-11-21",
+  "module": "M2 · Markets and prices",
+  "title": "Review: your third week, from curve shapes to your two trades",
+  "minutes": 13,
+  "story": "Friday evening, week three. Sam pins the two trade tickets, Cargo NS-01 and TTF-Q1, above your screen. *\"Tonight, no new words. Six lessons, one picture. Then do what you will do every evening from now on: look at your two trades and tell me what changed.\"* Robin pulls up a chair to listen.",
+  "objective": "I can connect the six lessons of week three and use them to check the two story trades.",
+  "write": [
+    {
+      "heading": "1. The week in six lines",
+      "body": "- **L15**: contango (later prices higher) and backwardation (later prices lower) (→ L15).\n- **L16**: spread = price A − price B; time, location, quality (→ L16).\n- **L17**: crack, spark and dark spreads = margin of a plant (→ L17).\n- **L18**: exchange (cleared, standard) vs OTC (bilateral, tailored); brokers (→ L18).\n- **L19**: tankers, charters, Worldscale, demurrage (→ L19).\n- **L20**: Cargo NS-01 and TTF-Q1, our two trades (→ L20)."
+    },
+    {
+      "heading": "2. Mini case: what changed tonight?",
+      "body": "Example (illustrative numbers):\n- The TTF Q1 tenor moves from 37 to 36 EUR/MWh. MtM of TTF-Q1 = (36 − 35) × 90,000 = **+90,000 EUR**, down 90,000 since yesterday.\n- The ship of Cargo NS-01 waits 2 days more than laytime at 40,000 USD/day: demurrage = **80,000 USD**, a new cost in the cargo P&L.\n- The 600 Brent futures are on ICE: cleared, so margin is paid every day, no credit risk on a counterparty."
+    },
+    {
+      "heading": "3. Your evening questions",
+      "body": "Which tenor and which source did I use? Are all costs in (freight, demurrage)? Exchange or OTC: who is the counterparty?"
+    }
+  ],
+  "check": [
+    {
+      "q": "The curve is 80 for M1 and 83 for M3. Contango or backwardation? What is the M1-M3 spread?",
+      "a": "Contango: later prices are higher. M1 − M3 = 80 − 83 = −3 (L15, L16; illustrative numbers)."
+    },
+    {
+      "q": "Power 100 EUR/MWh, gas 35, efficiency means 2 MWh of gas per MWh of power, 0.4 t CO2 per MWh at 70 EUR/t. Clean spark spread?",
+      "a": "100 − 2 × 35 − 0.4 × 70 = 100 − 70 − 28 = 2 EUR/MWh (L17; illustrative numbers)."
+    },
+    {
+      "q": "Why do the 600 Brent futures of Cargo NS-01 carry no counterparty credit risk for Northbridge?",
+      "a": "They are exchange-traded and cleared: the clearing house stands between buyer and seller, and margin is paid every day (L18)."
+    },
+    {
+      "q": "Name two costs that must appear in the P&L of Cargo NS-01 besides the crude price.",
+      "a": "Freight (the cost of the ship) and demurrage if the ship waits longer than laytime (L19, L20)."
+    }
+  ],
+  "read_more": "Flip back through L15 to L20 while you copy: each (→ L<n>) mark is a page to reread. All prices, days and rates are illustrative and Northbridge is fictional. This is the last lesson of module 2 (markets and prices). Module 3 starts next: the instruments themselves, beginning with the physical contract behind Cargo NS-01. Notice how the mini case already mixes the three things you will check every evening: the price (curve tenor and source), the costs (freight, demurrage) and the counterparty (exchange or OTC).",
+  "next": "Next lesson (L22): module 3 starts with the physical contract behind Cargo NS-01: term vs spot, and the key clauses.",
+  "concepts": [
+    "review m2 week 3",
+    "evening check of the story trades"
+  ],
+  "review": true,
+  "request_ids": [],
+  "links": [
+    {"lesson": 15, "why": "curve shapes"},
+    {"lesson": 16, "why": "spreads"},
+    {"lesson": 17, "why": "plant margins"},
+    {"lesson": 18, "why": "exchange vs OTC"},
+    {"lesson": 19, "why": "freight and demurrage"},
+    {"lesson": 20, "why": "the two story trades"}
+  ]
+}

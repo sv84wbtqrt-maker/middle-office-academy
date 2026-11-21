@@ -190,3 +190,20 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: trade ticket and capture (M4 lessons 36-37), pricing period of NS-01 (M3 lesson 26), swap hedge of NS-01 (M3 lesson 25), basis risk Dated Brent vs futures (M3 lesson 33), TTF-Q1 P&L explain (M5 lesson 58), TTF-Q1 limit breach (M6 lesson 89).
 - Words to copy: 199.
 - Learner feedback seen: L1 to L3, L5 to L10, L12, L14 to L17 right/right; L4, L11, L13 written without feedback. W = 17, target = 20, N = 19, so only L20 prepared. No questions in the Sheet.
+
+## Lesson 21 · 2026-11-21 · Review: your third week, from curve shapes to your two trades
+- Module: M2 · Markets and prices (last lesson of M2)
+- Taught: no new concept. Recap of L15 to L20 in six lines; mini case "what changed tonight?": TTF Q1 tenor 37 → 36, MtM of TTF-Q1 = +90,000 EUR (down 90,000); Cargo NS-01 ship waits 2 days beyond laytime at 40,000 USD/day = 80,000 USD demurrage; the 600 Brent futures are cleared on ICE (all illustrative). Three evening questions: tenor and source, all costs in, who is the counterparty.
+- Links made: (→ L15) to (→ L20).
+- Story: Sam pins the two trade tickets above your screen; Robin listens.
+- Words to copy: 257.
+
+## Lesson 22 · 2026-11-21 · Physical contracts: term vs spot, and the key clauses
+- Module: M3 · Instruments (first lesson)
+- Taught: spot vs term contract; key clauses (quantity and tolerance, quality specification, delivery and laycan, price formula, payment terms), GTCs, force majeure, laytime/demurrage clauses; check: P&L and invoice use the loaded volume (illustrative 600,000 bbl ±5% = 570,000 to 630,000; 612,000 loaded).
+- Links made: (→ L20) Cargo NS-01 is a spot deal, (→ L8) price formula (older lesson brought back), (→ L19) demurrage clauses.
+- Story: Lee brings the thick contract behind Cargo NS-01; Sam: "know which clauses change the money".
+- Facts used (read_more only): companies publish their own oil GTCs; EFET General Agreement common for European gas and power; bill of lading records the loaded volume. Tolerance, payment term and volumes illustrative.
+- Planted for later: Incoterms (L23), bill of lading and pricing period around B/L (L26), master agreements (M7 lesson 95), confirmations (M4 lesson 41), NS-01 loaded volume 612,000 bbl can be reused in the P&L and invoice lessons.
+- Words to copy: 228.
+- Learner feedback seen: L1 to L3, L5 to L10, L12, L14 to L19 right/right; L4, L11, L13 written without feedback. W = 19, target = 22, N = 20, so L21 and L22 prepared. No questions in the Sheet.
