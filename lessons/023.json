@@ -1,0 +1,67 @@
+{
+  "number": 23,
+  "date": "2026-11-24",
+  "module": "M3 · Instruments",
+  "title": "Incoterms in oil: FOB, CIF and DES",
+  "minutes": 12,
+  "story": "Tuesday, week four. Lee comes back with the NS-01 contract open at page two and points at three letters: **FOB**. *\"These three letters tell me who books the ship, who pays the insurance, and when the oil stops being our problem or starts being our problem.\"* Chris laughs from his desk: *\"That is why I was on the phone with the shipbroker last week. FOB means the ship is my job.\"*",
+  "objective": "I can explain FOB, CIF and DES and say when risk and title pass from seller to buyer.",
+  "write": [
+    {
+      "heading": "1. What is an Incoterm?",
+      "body": "An **Incoterm** is a short code in the delivery clause (→ L22). It says who pays transport and insurance, and where **risk** (who loses if the cargo is damaged) passes to the buyer. **Title** (ownership) typically passes with risk, but the contract can say otherwise."
+    },
+    {
+      "heading": "2. Three terms used in oil",
+      "body": "| Term | Who books the ship | Risk passes |\n|---|---|---|\n| **FOB** (Free On Board) | buyer | when oil is loaded at the load port |\n| **CIF** (Cost, Insurance, Freight) | seller, who also insures | also at the load port |\n| **DES** (Delivered Ex Ship) | seller | at the discharge port |"
+    },
+    {
+      "heading": "3. Cargo NS-01",
+      "body": "Northbridge buys NS-01 **FOB** in the North Sea. So Chris charters the Aframax and pays freight and demurrage (→ L19). From loading, any loss at sea is our risk."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Compare the Incoterm in the system with the contract. A CIF price includes freight, so it is typically higher than a FOB price for the same oil: the gap is close to the freight cost, like a location spread (→ L16)."
+    }
+  ],
+  "check": [
+    {
+      "q": "What does FOB mean, and who books the ship?",
+      "a": "Free On Board. The buyer books and pays the ship; risk passes to the buyer when the oil is loaded at the load port."
+    },
+    {
+      "q": "Under CIF, the seller pays the freight. When does risk pass to the buyer?",
+      "a": "At the load port, when the oil is loaded, like FOB. The seller pays freight and insurance, but the buyer carries the risk during the voyage."
+    },
+    {
+      "q": "Why is a CIF price typically higher than a FOB price for the same crude?",
+      "a": "Because the CIF price includes freight and insurance paid by the seller. The gap is close to the freight cost."
+    }
+  ],
+  "read_more": "Incoterms are published by the International Chamber of Commerce (ICC); the current version is Incoterms 2020. FOB and CIF are official Incoterms for sea transport. DES comes from older versions (it was removed in Incoterms 2010 and replaced in practice by DAP), but oil and LNG contracts still often use DES, defined in the company's own general terms and conditions. In oil trading, the GTCs typically override or complete the ICC rules, so always read how the contract defines each term. Cargo NS-01 being FOB is part of the fictional story.",
+  "next": "Next lesson (L24): futures in detail: initial margin, variation margin and daily settlement of the 600 Brent futures that hedge NS-01.",
+  "concepts": [
+    "incoterm",
+    "fob (free on board)",
+    "cif (cost, insurance, freight)",
+    "des (delivered ex ship)",
+    "transfer of risk",
+    "transfer of title"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 22,
+      "why": "the Incoterm sits in the delivery clause"
+    },
+    {
+      "lesson": 19,
+      "why": "FOB buyer charters the ship and pays freight and demurrage"
+    },
+    {
+      "lesson": 16,
+      "why": "CIF minus FOB is close to freight, like a location spread"
+    }
+  ]
+}

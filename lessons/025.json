@@ -1,0 +1,70 @@
+{
+  "number": 25,
+  "date": "2026-11-24",
+  "module": "M3 · Instruments",
+  "title": "Forwards and swaps: fixed against floating",
+  "minutes": 11,
+  "story": "Thursday. Robin draws two lines on the whiteboard. *\"NS-01 is priced on Dated Brent, but our hedge is in Brent futures. Close, but not the same price. Many desks use a swap on Dated Brent instead: no exchange, no daily margin, and the same price as the cargo.\"* Chris shrugs: *\"Swap, future, I just want the price locked.\"*",
+  "objective": "I can explain a forward and a fixed-for-floating swap, and calculate a simple swap settlement.",
+  "write": [
+    {
+      "heading": "1. Forward",
+      "body": "A **forward** is an OTC deal (→ L18) to buy or sell at a fixed price on a future date. It is tailored, not cleared, and settled only at the end. Example: 600,000 bbl for March delivery."
+    },
+    {
+      "heading": "2. Swap",
+      "body": "A **swap** exchanges a **fixed price** against a **floating price**, typically the average of a published price (→ L9) over a period. There is no delivery: only the difference is paid in cash.\n**Settlement = (floating - fixed) × volume**, paid to the fixed-price payer if positive."
+    },
+    {
+      "heading": "3. A swap on NS-01",
+      "body": "Northbridge **sells** a Dated Brent swap: it receives fixed and pays floating (→ L20).\nExample: fixed 80 USD/bbl, average Dated Brent 78 USD/bbl, 600,000 bbl.\nNorthbridge receives (80 - 78) × 600,000 = **1,200,000 USD**. The cargo lost value, the swap paid it back."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Check the **direction** (who pays fixed), the floating index, the averaging period and the volume. A wrong sign turns a hedge into a double bet."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is exchanged in a fixed-for-floating swap?",
+      "a": "A fixed price against a floating price (the average of a published index over a period). Only the cash difference is paid, there is no physical delivery."
+    },
+    {
+      "q": "Northbridge receives fixed 80 and pays floating. The average is 78 on 600,000 bbl. Who pays, and how much?",
+      "a": "The counterparty pays Northbridge (80 - 78) × 600,000 = 1,200,000 USD (illustrative)."
+    },
+    {
+      "q": "Give two differences between a swap and a future (→ L24).",
+      "a": "A future is a standard exchange contract, cleared, with daily margin. A swap is typically OTC, tailored (any index, period and volume), with bilateral credit risk and cash settlement at the end of the period."
+    }
+  ],
+  "read_more": "Oil swaps are usually priced against the average of a PRA assessment (for example Platts Dated Brent) over a month or another agreed period. Many OTC swaps can also be cleared through an exchange clearing house, which then removes the bilateral credit risk; cleared OTC comes back in module 7. The small difference between the price of the cargo (Dated Brent) and the price of the hedge (Brent futures) is called basis risk, a topic for lesson 33. All prices, volumes and the choice of a swap for NS-01 are illustrative, part of the fictional story.",
+  "next": "Next lesson (L26): pricing periods: why NS-01 may be priced on the average of five days around the bill of lading.",
+  "concepts": [
+    "forward contract",
+    "swap",
+    "fixed price",
+    "floating price",
+    "swap settlement"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 24,
+      "why": "swap compared with futures and daily margin"
+    },
+    {
+      "lesson": 18,
+      "why": "OTC: tailored and bilateral"
+    },
+    {
+      "lesson": 20,
+      "why": "Cargo NS-01 priced on Dated Brent"
+    },
+    {
+      "lesson": 9,
+      "why": "floating price published by a PRA"
+    }
+  ]
+}

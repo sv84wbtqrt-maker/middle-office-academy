@@ -504,7 +504,76 @@
     19
    ],
    "words": 228
+  },
+  {
+   "number": 23,
+   "date": "2026-11-24",
+   "module": "M3 · Instruments",
+   "title": "Incoterms in oil: FOB, CIF and DES",
+   "minutes": 12,
+   "review": false,
+   "concepts": [
+    "incoterm",
+    "fob (free on board)",
+    "cif (cost, insurance, freight)",
+    "des (delivered ex ship)",
+    "transfer of risk",
+    "transfer of title"
+   ],
+   "request_ids": [],
+   "links": [
+    22,
+    19,
+    16
+   ],
+   "words": 228
+  },
+  {
+   "number": 24,
+   "date": "2026-11-24",
+   "module": "M3 · Instruments",
+   "title": "Futures: margin and daily settlement",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "futures contract",
+    "initial margin",
+    "variation margin",
+    "settlement price",
+    "daily settlement",
+    "margin call"
+   ],
+   "request_ids": [],
+   "links": [
+    18,
+    20,
+    6
+   ],
+   "words": 220
+  },
+  {
+   "number": 25,
+   "date": "2026-11-24",
+   "module": "M3 · Instruments",
+   "title": "Forwards and swaps: fixed against floating",
+   "minutes": 11,
+   "review": false,
+   "concepts": [
+    "forward contract",
+    "swap",
+    "fixed price",
+    "floating price",
+    "swap settlement"
+   ],
+   "request_ids": [],
+   "links": [
+    24,
+    18,
+    20,
+    9
+   ],
+   "words": 208
   }
  ],
- "latest": 22
+ "latest": 25
 }

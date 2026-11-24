@@ -3,15 +3,15 @@
  "handled_requests": [],
  "scheduled_requests": [],
  "story_objects": {
-  "Cargo NS-01": "introduced in L20: buy 600,000 bbl North Sea crude at Dated Brent + 0.50 USD/bbl (illustrative), loading next month on an Aframax, hedged by selling 600 ICE Brent futures; L21 mini case: 2 days demurrage at 40,000 USD/day = 80,000 USD; L22: spot contract, 600,000 bbl ±5%, 612,000 bbl loaded (illustrative)",
+  "Cargo NS-01": "introduced in L20: buy 600,000 bbl North Sea crude at Dated Brent + 0.50 USD/bbl (illustrative), loading next month on an Aframax, hedged by selling 600 ICE Brent futures; L21 mini case: 2 days demurrage at 40,000 USD/day = 80,000 USD; L22: spot contract, 600,000 bbl ±5%, 612,000 bbl loaded (illustrative); L23: bought FOB North Sea, Chris charters the Aframax, risk ours from loading; L24: short 600 futures, settlement 80 -> 79 = +600,000 USD variation margin; L25: Robin's alternative hedge, sell a Dated Brent swap fixed 80 vs average 78 = +1,200,000 USD (all illustrative)",
   "TTF-Q1": "introduced in L20: Dana buys 1,000 MWh/day for Q1 = 90,000 MWh at 35 EUR/MWh; MtM at curve 37 = +180,000 EUR (illustrative); L21 mini case: Q1 tenor 36, MtM +90,000 EUR (illustrative)",
   "600,000 bbl cargo": "hedge example in L5, became Cargo NS-01 in L20",
   "Dana": "gas and power trader, leads L10 (gas hubs), L11 (power markets) and L12 (carbon)",
   "Forward curves": "introduced in L13 (TTF curve example); shapes (contango/backwardation) in L15; time spreads in L16",
-  "Robin": "market risk manager, first appears in L15 (curve shapes), back in L16 (spreads)",
-  "Lee": "back office / operations, first appears in L18 (exchange vs OTC); brings the NS-01 contract in L22",
+  "Robin": "market risk manager, first appears in L15 (curve shapes), back in L16 (spreads); L24 daily settlement, L25 Dated Brent swap vs futures (basis risk planted for L33)",
+  "Lee": "back office / operations, first appears in L18 (exchange vs OTC); brings the NS-01 contract in L22; L23 Incoterm on page two of NS-01 contract; L24 clearing broker margin email",
   "Spreads": "L16 time/location/quality; L17 crack, spark, dark (illustrative clean spark = 2 EUR/MWh); power spread object planned later",
   "Freight": "L19: voyage vs time charter, Worldscale, demurrage; Chris's North Sea to Mediterranean arbitrage; Cargo NS-01 (600,000 bbl) can sail on an Aframax"
  },
- "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12, L14-L19). Keep 190 to 260 words to copy. M3 started at L22 (physical contracts). Next: L23 Incoterms FOB/CIF/DES with NS-01, L24 futures margin and daily settlement, L25 swaps hedging NS-01, L26 pricing periods around B/L (reuse 612,000 bbl loaded), L27 futures vs swaps, L28 review."
+ "pace_notes": "All rated lessons right/right (L1-L3, L5-L10, L12, L14-L22). Keep 190 to 260 words to copy. M3: L22 contracts, L23 Incoterms, L24 futures margin, L25 forwards and swaps. Next: L26 pricing periods around B/L (reuse 612,000 bbl loaded), L27 futures vs swaps / options intro per roadmap, L28 review (recap L22-L27)."
 }

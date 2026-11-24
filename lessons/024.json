@@ -1,0 +1,67 @@
+{
+  "number": 24,
+  "date": "2026-11-24",
+  "module": "M3 · Instruments",
+  "title": "Futures: margin and daily settlement",
+  "minutes": 11,
+  "story": "Wednesday morning. Lee shows you an email from the clearing broker: a cash movement of 600,000 USD, received overnight. *\"Nobody sold anything yesterday. So why did we get money?\"* Robin smiles: *\"Because Brent fell one dollar, and we are short 600 futures. With futures, you do not wait for the end. You are paid, or you pay, every single day.\"*",
+  "objective": "I can explain initial margin, variation margin and daily settlement, and check a margin call against the P&L.",
+  "write": [
+    {
+      "heading": "1. Standard contracts",
+      "body": "A **future** is a standard exchange contract (→ L18): fixed lot size, fixed delivery month, same rules for everyone. Example: one ICE Brent future = 1,000 bbl."
+    },
+    {
+      "heading": "2. Two kinds of margin",
+      "body": "- **Initial margin**: a deposit paid to the clearing house when the position is opened. It covers a bad day.\n- **Variation margin**: the daily gain or loss, paid or received in cash every day.\nEach evening the exchange publishes a **settlement price**. The position is revalued at this price: this is **daily settlement**."
+    },
+    {
+      "heading": "3. NS-01 hedge, one day",
+      "body": "Northbridge is short 600 Brent futures (→ L20).\nExample: settlement goes from 80 to 79 USD/bbl.\nGain = 1 × 600 lots × 1,000 bbl = **+600,000 USD**, received in cash.\nThe physical cargo lost about the same value on paper: that is the hedge."
+    },
+    {
+      "heading": "4. Middle office check",
+      "body": "Each morning, compare the variation margin on the clearing statement with the futures P&L in the daily report (→ L6). They must match. A **margin call** (a demand for more cash) must be paid on time."
+    }
+  ],
+  "check": [
+    {
+      "q": "What is the difference between initial margin and variation margin?",
+      "a": "Initial margin is a deposit paid when the position is opened, to cover a bad day. Variation margin is the daily gain or loss paid or received in cash after each settlement."
+    },
+    {
+      "q": "Short 600 Brent futures, settlement falls from 80 to 79 USD/bbl. What is the variation margin?",
+      "a": "1 × 600 × 1,000 = +600,000 USD received (illustrative prices)."
+    },
+    {
+      "q": "Which two numbers must match every morning?",
+      "a": "The variation margin on the clearing statement and the futures P&L in the middle office daily report."
+    }
+  ],
+  "read_more": "ICE Brent futures trade on ICE Futures Europe with a lot size of 1,000 barrels and are cash settled at expiry against the ICE Brent Index, with an option to exchange for physical (EFP). Margin levels are set by the clearing house (ICE Clear Europe) and change with market volatility. A company usually accesses the exchange through a clearing member (often called the clearing broker), which sends a daily statement. Daily margin can create large cash needs when prices move fast, which is a liquidity risk: you will meet it again in module 6. The 80 and 79 USD/bbl prices are illustrative.",
+  "next": "Next lesson (L25): forwards and swaps: fixed against floating, and why Robin wants a Dated Brent swap on NS-01.",
+  "concepts": [
+    "futures contract",
+    "initial margin",
+    "variation margin",
+    "settlement price",
+    "daily settlement",
+    "margin call"
+  ],
+  "review": false,
+  "request_ids": [],
+  "links": [
+    {
+      "lesson": 18,
+      "why": "exchange, clearing house and margin first seen there"
+    },
+    {
+      "lesson": 20,
+      "why": "the 600 Brent futures hedging NS-01"
+    },
+    {
+      "lesson": 6,
+      "why": "futures P&L in the morning daily report"
+    }
+  ]
+}

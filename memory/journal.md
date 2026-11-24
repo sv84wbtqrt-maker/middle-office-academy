@@ -207,3 +207,30 @@ department of TotalEnergies. Long-term course, 15 minutes of handwriting per day
 - Planted for later: Incoterms (L23), bill of lading and pricing period around B/L (L26), master agreements (M7 lesson 95), confirmations (M4 lesson 41), NS-01 loaded volume 612,000 bbl can be reused in the P&L and invoice lessons.
 - Words to copy: 228.
 - Learner feedback seen: L1 to L3, L5 to L10, L12, L14 to L19 right/right; L4, L11, L13 written without feedback. W = 19, target = 22, N = 20, so L21 and L22 prepared. No questions in the Sheet.
+
+## Lesson 23 · 2026-11-24 · Incoterms in oil: FOB, CIF and DES
+- Module: M3 · Instruments
+- Taught: Incoterm in the delivery clause, risk vs title (title typically with risk), FOB (buyer books ship, risk at load port), CIF (seller pays freight and insurance, risk still at load port), DES (risk at discharge port); NS-01 bought FOB so freight and demurrage are ours; CIF minus FOB ≈ freight.
+- Links made: (→ L22) delivery clause, (→ L19) freight and demurrage, (→ L16) location spread (older lesson brought back).
+- Story: Lee shows "FOB" on page two of the NS-01 contract; Chris: "FOB means the ship is my job".
+- Facts used (read_more only): ICC Incoterms 2020; DES removed in Incoterms 2010 (DAP), still used in oil/LNG GTCs.
+- Planted for later: bill of lading (L26), insurance and cargo loss, title vs payment in credit (M7).
+- Words to copy: 228.
+- Learner feedback seen: L1 to L3, L5 to L10, L12, L14 to L22 right/right; L4, L11, L13 written without feedback. W = 22, target = 25, N = 22, so L23, L24 and L25 prepared. No questions in the Sheet.
+
+## Lesson 24 · 2026-11-24 · Futures: margin and daily settlement
+- Module: M3 · Instruments
+- Taught: standard futures (ICE Brent 1,000 bbl), initial margin, variation margin, settlement price, daily settlement, margin call; NS-01 hedge example: short 600 lots, 80 → 79 = +600,000 USD (illustrative); check: clearing statement variation margin = futures P&L.
+- Links made: (→ L18) exchange and clearing, (→ L20) the 600 futures, (→ L6) daily report (older lesson).
+- Story: Lee's overnight 600,000 USD cash email from the clearing broker; Robin explains.
+- Facts used (read_more only): ICE Brent cash settled vs ICE Brent Index with EFP; margins set by ICE Clear Europe.
+- Planted for later: liquidity risk of margin (M6), futures vs swaps comparison, cleared OTC (M7).
+- Words to copy: 220.
+
+## Lesson 25 · 2026-11-24 · Forwards and swaps: fixed against floating
+- Module: M3 · Instruments
+- Taught: forward (OTC, fixed price, one date, settled at end), fixed-for-floating swap (floating = average of PRA price, cash difference only), settlement formula; NS-01 example: sell Dated Brent swap fixed 80 vs average 78 on 600,000 bbl = +1,200,000 USD (illustrative); check direction, index, averaging period, volume.
+- Links made: (→ L24) futures comparison, (→ L18) OTC, (→ L20) NS-01 priced on Dated Brent, (→ L9) PRA (older lesson).
+- Story: Robin proposes a Dated Brent swap instead of futures; Chris "I just want the price locked".
+- Planted for later: basis risk Dated Brent vs futures (L33), cleared swaps (M7), averaging period links to L26 pricing period.
+- Words to copy: 207.
